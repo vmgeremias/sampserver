@@ -1,0 +1,45 @@
+//Global TextDraws: 
+
+	new Text:Date;
+	new Text:Line1;
+	new Text:Line2;
+	new Text:Time;
+
+	Date = TextDrawCreate(45.000000, 326.000000, "06/04/2015");
+	TextDrawBackgroundColor(Date, 255);
+	TextDrawFont(Date, 3);
+	TextDrawLetterSize(Date, 0.509999, 1.000000);
+	TextDrawColor(Date, -1);
+	TextDrawSetOutline(Date, 0);
+	TextDrawSetProportional(Date, 1);
+	TextDrawSetShadow(Date, 1);
+
+	Line1 = TextDrawCreate(36.000000, 332.000000, "-");
+	TextDrawBackgroundColor(Line1, 255);
+	TextDrawFont(Line1, 1);
+	TextDrawLetterSize(Line1, 6.699995, 1.000000);
+	TextDrawColor(Line1, 16711935);
+	TextDrawSetOutline(Line1, 0);
+	TextDrawSetProportional(Line1, 1);
+	TextDrawSetShadow(Line1, 1);
+
+	Line2 = TextDrawCreate(36.000000, 318.000000, "-");
+	TextDrawBackgroundColor(Line2, 255);
+	TextDrawFont(Line2, 1);
+	TextDrawLetterSize(Line2, 6.699995, 1.000000);
+	TextDrawColor(Line2, 16711935);
+	TextDrawSetOutline(Line2, 0);
+	TextDrawSetProportional(Line2, 1);
+	TextDrawSetShadow(Line2, 1);
+
+	Time = TextDrawCreate(49.000000, 311.000000, "00:00:00");
+	TextDrawBackgroundColor(Time, 255);
+	TextDrawFont(Time, 1);
+	TextDrawLetterSize(Time, 0.500000, 1.000000);
+	TextDrawColor(Time, -1);
+	TextDrawSetOutline(Time, 0);
+	TextDrawSetProportional(Time, 1);
+
+
+
+

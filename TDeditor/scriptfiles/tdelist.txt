@@ -1,0 +1,5 @@
+Info.tde
+Pontuacao.tde
+Time.tde
+
+asdaa.tde

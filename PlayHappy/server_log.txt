@@ -1,0 +1,1444 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[15:13:08] filterscripts = ""  (string)
+[15:13:08] password = ""  (string)
+[15:13:08] 
+[15:13:08] Server Plugins
+[15:13:08] --------------
+[15:13:08]  Loading plugin: streamer
+[15:13:08] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[15:13:08]   Loaded.
+[15:13:08]  Loaded 1 plugins.
+
+[15:13:08] 
+[15:13:08] Filterscripts
+[15:13:08] ---------------
+[15:13:08]   Loaded 0 filterscripts.
+
+[15:13:08] empresas com interiores carregadas
+[15:13:08] empresas sem interiores carregadas
+[15:13:08] organizacoes Carregadas
+[15:13:08] casas carregadas
+[15:13:08] Anti-xiters carregados 
+[15:13:08] carros carregados
+[15:13:08] cofre orgs carregados
+[15:13:08] todos os carros posicionados
+[15:13:08]  _______________________________________
+[15:13:08] |                                       |
+[15:13:08] |»»       Brasil PlayHappy RPG        ««|
+[15:13:08] |---------------------------------------|••••
+[15:13:08] |»»         RPG versão 2.6a           ««|
+[15:13:09] |»»      Los Santos / San Fierro      ««|
+[15:13:09] |---------------------------------------|
+[15:13:09] |»»         by dimmy_scarface         ««|
+[15:13:09] |_______________________________________|
+[15:13:09]  
+[15:13:09] Number of vehicle models: 82
+[15:13:29] Incoming connection: 127.0.0.1:3900
+[15:13:30] [join] dimmy_scarface has joined the server (0:127.0.0.1)
+[15:13:30] AdmCmd: dimmy_scarface (IP: 127.0.0.1) conectou-se.
+[15:13:33] dimmy_scarface logou no server.
+[15:15:15] --- Server Shutting Down.
+[15:15:15] 
+=================================================================
+[15:15:15] Servidor Desligado: [21/10/2012 15:15:15]
+[15:15:15] =================================================================
+
+[15:15:15] [part] dimmy_scarface has left the server (0:0)
+[15:15:15] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[15:16:12] filterscripts = ""  (string)
+[15:16:12] password = ""  (string)
+[15:16:12] 
+[15:16:12] Server Plugins
+[15:16:12] --------------
+[15:16:12]  Loading plugin: streamer
+[15:16:12] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[15:16:12]   Loaded.
+[15:16:12]  Loaded 1 plugins.
+
+[15:16:12] 
+[15:16:12] Filterscripts
+[15:16:12] ---------------
+[15:16:12]   Loaded 0 filterscripts.
+
+[15:16:12] empresas com interiores carregadas
+[15:16:12] empresas sem interiores carregadas
+[15:16:12] organizacoes Carregadas
+[15:16:12] casas carregadas
+[15:16:12] Anti-xiters carregados 
+[15:16:12] carros carregados
+[15:16:12] cofre orgs carregados
+[15:16:12] todos os carros posicionados
+[15:16:12]  _______________________________________
+[15:16:12] |                                       |
+[15:16:12] |»»       Brasil PlayHappy RPG        ««|
+[15:16:12] |---------------------------------------|••••
+[15:16:13] |»»         RPG versão 2.6a           ««|
+[15:16:13] |»»      Los Santos / San Fierro      ««|
+[15:16:13] |---------------------------------------|
+[15:16:13] |»»         by dimmy_scarface         ««|
+[15:16:13] |_______________________________________|
+[15:16:13]  
+[15:16:13] Number of vehicle models: 82
+[15:16:39] Incoming connection: 127.0.0.1:3995
+[15:16:39] [join] dimmy_scarface has joined the server (0:127.0.0.1)
+[15:16:39] AdmCmd: dimmy_scarface (IP: 127.0.0.1) conectou-se.
+[15:16:44] dimmy_scarface logou no server.
+[15:16:52] [death] dimmy_scarface died 255
+[15:18:27] 
+=================================================================
+[15:18:27] Servidor Desligado: [21/10/2012 15:18:27]
+[15:18:27] =================================================================
+
+[15:18:39] empresas com interiores carregadas
+[15:18:39] empresas sem interiores carregadas
+[15:18:39] organizacoes Carregadas
+[15:18:39] casas carregadas
+[15:18:39] Anti-xiters carregados 
+[15:18:39] carros carregados
+[15:18:40] cofre orgs carregados
+[15:18:40] todos os carros posicionados
+[15:18:40]  _______________________________________
+[15:18:40] |                                       |
+[15:18:40] |»»       Brasil PlayHappy RPG        ««|
+[15:18:40] |---------------------------------------|••••
+[15:18:40] |»»         RPG versão 2.6a           ««|
+[15:18:40] |»»      Los Santos / San Fierro      ««|
+[15:18:40] |---------------------------------------|
+[15:18:41] |»»         by dimmy_scarface         ««|
+[15:18:41] |_______________________________________|
+[15:18:41]  
+[15:18:41] Number of vehicle models: 82
+[15:18:41] AdmCmd: dimmy_scarface (IP: 127.0.0.1) conectou-se.
+[15:18:46] dimmy_scarface logou no server.
+[15:23:14] --- Server Shutting Down.
+[15:23:14] 
+=================================================================
+[15:23:14] Servidor Desligado: [21/10/2012 15:23:14]
+[15:23:14] =================================================================
+
+[15:23:14] [part] dimmy_scarface has left the server (0:0)
+[15:23:14] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[16:13:40] filterscripts = ""  (string)
+[16:13:40] password = ""  (string)
+[16:13:40] 
+[16:13:40] Server Plugins
+[16:13:40] --------------
+[16:13:40]  Loading plugin: streamer
+[16:13:40] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[16:13:40]   Loaded.
+[16:13:40]  Loaded 1 plugins.
+
+[16:13:40] 
+[16:13:40] Filterscripts
+[16:13:40] ---------------
+[16:13:40]   Loaded 0 filterscripts.
+
+[16:13:40] empresas com interiores carregadas
+[16:13:40] empresas sem interiores carregadas
+[16:13:40] organizacoes Carregadas
+[16:13:40] casas carregadas
+[16:13:40] Anti-xiters carregados 
+[16:13:40] carros carregados
+[16:13:40] cofre orgs carregados
+[16:13:40] todos os carros posicionados
+[16:13:40]  _______________________________________
+[16:13:40] |                                       |
+[16:13:40] |»»       Brasil PlayHappy RPG        ««|
+[16:13:40] |---------------------------------------|••••
+[16:13:40] |»»         RPG versão 2.6a           ««|
+[16:13:41] |»»      Los Santos / San Fierro      ««|
+[16:13:41] |---------------------------------------|
+[16:13:41] |»»         by dimmy_scarface         ««|
+[16:13:41] |_______________________________________|
+[16:13:41]  
+[16:13:41] Number of vehicle models: 82
+[16:14:03] Incoming connection: 127.0.0.1:4102
+[16:14:03] [join] dimmy_scarface has joined the server (0:127.0.0.1)
+[16:14:03] AdmCmd: dimmy_scarface (IP: 127.0.0.1) conectou-se.
+[16:14:06] dimmy_scarface logou no server.
+[16:24:30] --- Server Shutting Down.
+[16:24:30] 
+=================================================================
+[16:24:30] Servidor Desligado: [21/10/2012 16:24:30]
+[16:24:30] =================================================================
+
+[16:24:30] [part] dimmy_scarface has left the server (0:0)
+[16:24:30] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[20:19:08] filterscripts = ""  (string)
+[20:19:08] password = ""  (string)
+[20:19:08] 
+[20:19:08] Server Plugins
+[20:19:08] --------------
+[20:19:08]  Loading plugin: streamer
+[20:19:08] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[20:19:08]   Loaded.
+[20:19:08]  Loaded 1 plugins.
+
+[20:19:08] 
+[20:19:08] Filterscripts
+[20:19:08] ---------------
+[20:19:08]   Loaded 0 filterscripts.
+
+[20:19:08] empresas com interiores carregadas
+[20:19:08] empresas sem interiores carregadas
+[20:19:08] organizacoes Carregadas
+[20:19:08] casas carregadas
+[20:19:08] Anti-xiters carregados 
+[20:19:08] carros carregados
+[20:19:09] cofre orgs carregados
+[20:19:09] todos os carros posicionados
+[20:19:09]  _______________________________________
+[20:19:09] |                                       |
+[20:19:09] |»»       Brasil PlayHappy RPG        ««|
+[20:19:09] |---------------------------------------|••••
+[20:19:09] |»»         RPG versão 2.6a           ««|
+[20:19:09] |»»      Los Santos / San Fierro      ««|
+[20:19:10] |---------------------------------------|
+[20:19:10] |»»         by dimmy_scarface         ««|
+[20:19:10] |_______________________________________|
+[20:19:10]  
+[20:19:10] Number of vehicle models: 82
+[20:20:10] --- Server Shutting Down.
+[20:20:10] 
+=================================================================
+[20:20:10] Servidor Desligado: [21/10/2012 20:20:10]
+[20:20:10] =================================================================
+
+[20:20:10] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:37:01] filterscripts = ""  (string)
+[22:37:01] password = ""  (string)
+[22:37:01] 
+[22:37:01] Server Plugins
+[22:37:01] --------------
+[22:37:01]  Loading plugin: streamer
+[22:37:01] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:37:01]   Loaded.
+[22:37:01]  Loaded 1 plugins.
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:37:01] filterscripts = ""  (string)
+[22:37:01] password = ""  (string)
+[22:37:01] 
+[22:37:01] Server Plugins
+[22:37:01] --------------
+[22:37:01]  Loading plugin: streamer
+[22:37:01] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:37:01]   Loaded.
+[22:37:01]  Loaded 1 plugins.
+
+[22:37:01] 
+[22:37:01] Filterscripts
+[22:37:01] ---------------
+[22:37:01]   Loaded 0 filterscripts.
+
+[22:37:01] empresas com interiores carregadas
+[22:37:01] empresas sem interiores carregadas
+[22:37:01] organizacoes Carregadas
+[22:37:02] casas carregadas
+[22:37:02] Anti-xiters carregados 
+[22:37:02] carros carregados
+[22:37:02] 
+[22:37:02] Filterscripts
+[22:37:02] ---------------
+[22:37:02]   Loaded 0 filterscripts.
+
+[22:37:02] empresas com interiores carregadas
+[22:37:02] empresas sem interiores carregadas
+[22:37:02] cofre orgs carregados
+[22:37:02] todos os carros posicionados
+[22:37:02]  _______________________________________
+[22:37:02] |                                       |
+[22:37:02] |»»       Brasil PlayHappy RPG        ««|
+[22:37:02] |---------------------------------------|••••
+[22:37:02] organizacoes Carregadas
+[22:37:02] casas carregadas
+[22:37:02] Anti-xiters carregados 
+[22:37:02] carros carregados
+[22:37:02] |»»         RPG versão 2.6a           ««|
+[22:37:02] cofre orgs carregados
+[22:37:02] todos os carros posicionados
+[22:37:02]  _______________________________________
+[22:37:02] |                                       |
+[22:37:02] |»»       Brasil PlayHappy RPG        ««|
+[22:37:02] |---------------------------------------|••••
+[22:37:02] |»»         RPG versão 2.6a           ««|
+[22:37:02] |»»      Los Santos / San Fierro      ««|
+[22:37:02] |---------------------------------------|
+[22:37:02] |»»         by dimmy_scarface         ««|
+[22:37:02] |_______________________________________|
+[22:37:02]  
+[22:37:02] Number of vehicle models: 82
+[22:37:02] |»»      Los Santos / San Fierro      ««|
+[22:37:02] |---------------------------------------|
+[22:37:03] |»»         by dimmy_scarface         ««|
+[22:37:03] |_______________________________________|
+[22:37:03]  
+[22:37:03] Number of vehicle models: 82
+[22:37:03] --- Server Shutting Down.
+[22:37:03] 
+=================================================================
+[22:37:03] Servidor Desligado: [21/10/2012 22:37:03]
+[22:37:03] =================================================================
+
+[22:37:03] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+[22:38:15] Incoming connection: 127.0.0.1:4557
+[22:38:15] [join] jadson_scarface has joined the server (0:127.0.0.1)
+[22:38:15] AdmCmd: jadson_scarface (IP: 127.0.0.1) conectou-se.
+[22:38:25] jadson_scarface logou no server.
+[23:00:16] [death] jadson_scarface died 255
+[23:00:21] ** jadson_scarface (Top Crimes) deslogou do servidor.
+[23:00:21] ** jadson_scarface (Top Grana) deslogou do servidor.
+[23:00:21] ** jadson_scarface (Top Horas jogadas) deslogou do servidor.
+[23:00:21] ** jadson_scarface (Top Noob) deslogou do servidor.
+[23:00:21] ** jadson_scarface (Top Respeito) deslogou do servidor.
+[23:00:21] ** jadson_scarface (Top Nivel) deslogou do servidor.
+[23:00:21] [part] jadson_scarface has left the server (0:1)
+[23:02:02] --- Server Shutting Down.
+[23:02:02] 
+=================================================================
+[23:02:02] Servidor Desligado: [21/10/2012 23:02:02]
+[23:02:02] =================================================================
+
+[23:02:02] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[23:30:48] filterscripts = ""  (string)
+[23:30:48] password = ""  (string)
+[23:30:48] 
+[23:30:48] Server Plugins
+[23:30:48] --------------
+[23:30:48]  Loading plugin: streamer
+[23:30:48] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[23:30:48]   Loaded.
+[23:30:48]  Loaded 1 plugins.
+
+[23:30:48] 
+[23:30:48] Filterscripts
+[23:30:48] ---------------
+[23:30:48]   Loaded 0 filterscripts.
+
+[23:30:48] empresas com interiores carregadas
+[23:30:48] empresas sem interiores carregadas
+[23:30:48] organizacoes Carregadas
+[23:30:48] casas carregadas
+[23:30:48] Anti-xiters carregados 
+[23:30:48] carros carregados
+[23:30:48] cofre orgs carregados
+[23:30:48] todos os carros posicionados
+[23:30:48]  _______________________________________
+[23:30:48] |                                       |
+[23:30:48] |»»       Brasil PlayHappy RPG        ««|
+[23:30:48] |---------------------------------------|••••
+[23:30:48] |»»         RPG versão 2.6a           ««|
+[23:30:48] |»»      Los Santos / San Fierro      ««|
+[23:30:49] |---------------------------------------|
+[23:30:49] |»»         by dimmy_scarface         ««|
+[23:30:49] |_______________________________________|
+[23:30:49]  
+[23:30:49] Number of vehicle models: 82
+[23:31:11] Incoming connection: 127.0.0.1:4769
+[23:31:12] [join] jadson_scarface has joined the server (0:127.0.0.1)
+[23:31:12] AdmCmd: jadson_scarface (IP: 127.0.0.1) conectou-se.
+[23:31:20] jadson_scarface logou no server.
+[23:35:42] --- Server Shutting Down.
+[23:35:42] 
+=================================================================
+[23:35:42] Servidor Desligado: [21/10/2012 23:35:42]
+[23:35:42] =================================================================
+
+[23:35:42] [part] jadson_scarface has left the server (0:0)
+[23:35:42] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[13:23:28] filterscripts = ""  (string)
+[13:23:28] password = ""  (string)
+[13:23:28] 
+[13:23:28] Server Plugins
+[13:23:28] --------------
+[13:23:28]  Loading plugin: streamer
+[13:23:28] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[13:23:28]   Loaded.
+[13:23:28]  Loaded 1 plugins.
+
+[13:23:28] 
+[13:23:28] Filterscripts
+[13:23:28] ---------------
+[13:23:28]   Loaded 0 filterscripts.
+
+[13:23:29] empresas com interiores carregadas
+[13:23:29] empresas sem interiores carregadas
+[13:23:29] organizacoes Carregadas
+[13:23:29] casas carregadas
+[13:23:29] Anti-xiters carregados 
+[13:23:29] carros carregados
+[13:23:29] cofre orgs carregados
+[13:23:29] todos os carros posicionados
+[13:23:29]  _______________________________________
+[13:23:29] |                                       |
+[13:23:29] |»»       Brasil PlayHappy RPG        ««|
+[13:23:29] |---------------------------------------|••••
+[13:23:29] |»»         RPG versão 2.6a           ««|
+[13:23:30] |»»      Los Santos / San Fierro      ««|
+[13:23:30] |---------------------------------------|
+[13:23:30] |»»         by dimmy_scarface         ««|
+[13:23:30] |_______________________________________|
+[13:23:30]  
+[13:23:30] Number of vehicle models: 82
+[13:24:14] Incoming connection: 127.0.0.1:1262
+[13:24:15] [join] Sun_xD has joined the server (0:127.0.0.1)
+[13:24:15] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[13:24:30] Sun_xD logou no server.
+[13:32:31] ** Sun_xD (Top Grana) deslogou do servidor.
+[13:32:31] ** Sun_xD (Top Nivel) deslogou do servidor.
+[13:32:31] [part] Sun_xD has left the server (0:2)
+[13:33:01] Incoming connection: 127.0.0.1:1285
+[13:33:01] [join] Sun_xD has joined the server (0:127.0.0.1)
+[13:33:01] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[13:33:17] ***Sun_xD Saiu do servidor kickado ou banido.
+[13:33:17] [part] Sun_xD has left the server (0:2)
+[13:33:46] --- Server Shutting Down.
+[13:33:46] 
+=================================================================
+[13:33:46] Servidor Desligado: [22/10/2012 13:33:46]
+[13:33:46] =================================================================
+
+[13:33:46] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[19:31:05] filterscripts = ""  (string)
+[19:31:05] password = ""  (string)
+[19:31:05] 
+[19:31:05] Server Plugins
+[19:31:05] --------------
+[19:31:05]  Loading plugin: streamer
+[19:31:05] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[19:31:05]   Loaded.
+[19:31:05]  Loaded 1 plugins.
+
+[19:31:05] 
+[19:31:05] Filterscripts
+[19:31:05] ---------------
+[19:31:05]   Loaded 0 filterscripts.
+
+[19:31:05] empresas com interiores carregadas
+[19:31:05] empresas sem interiores carregadas
+[19:31:06] organizacoes Carregadas
+[19:31:06] casas carregadas
+[19:31:06] Anti-xiters carregados 
+[19:31:06] carros carregados
+[19:31:06] cofre orgs carregados
+[19:31:06] todos os carros posicionados
+[19:31:06]  _______________________________________
+[19:31:06] |                                       |
+[19:31:06] |»»       Brasil PlayHappy RPG        ««|
+[19:31:06] |---------------------------------------|••••
+[19:31:07] |»»         RPG versão 2.6a           ««|
+[19:31:07] |»»      Los Santos / San Fierro      ««|
+[19:31:07] |---------------------------------------|
+[19:31:07] |»»         by dimmy_scarface         ««|
+[19:31:07] |_______________________________________|
+[19:31:07]  
+[19:31:07] Number of vehicle models: 82
+[19:31:37] Incoming connection: 127.0.0.1:4130
+[19:31:38] [join] Sun_xD has joined the server (0:127.0.0.1)
+[19:31:38] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[19:31:46] ***Sun_xD Saiu do servidor kickado ou banido.
+[19:31:46] [part] Sun_xD has left the server (0:2)
+[19:32:28] Incoming connection: 127.0.0.1:4131
+[19:32:28] [join] Sun_xD has joined the server (0:127.0.0.1)
+[19:32:28] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[19:32:32] Sun_xD logou no server.
+[19:35:23] AdmCmd: Respawn dado com sucesso por Sun_xD
+[19:35:33] AdmCmd: Respawn dado com sucesso por Sun_xD
+[19:35:36] AdmCmd: Respawn dado com sucesso por Sun_xD
+[19:35:41] AdmCmd: Respawn dado com sucesso por Sun_xD
+[19:43:14] --- Server Shutting Down.
+[19:43:14] 
+=================================================================
+[19:43:14] Servidor Desligado: [22/10/2012 19:43:14]
+[19:43:14] =================================================================
+
+[19:43:14] [part] Sun_xD has left the server (0:0)
+[19:43:15] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[20:39:01] filterscripts = ""  (string)
+[20:39:01] password = ""  (string)
+[20:39:01] 
+[20:39:01] Server Plugins
+[20:39:01] --------------
+[20:39:01]  Loading plugin: streamer
+[20:39:01] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[20:39:01]   Loaded.
+[20:39:01]  Loaded 1 plugins.
+
+[20:39:01] 
+[20:39:01] Filterscripts
+[20:39:01] ---------------
+[20:39:01]   Loaded 0 filterscripts.
+
+[20:39:01] empresas com interiores carregadas
+[20:39:01] empresas sem interiores carregadas
+[20:39:01] organizacoes Carregadas
+[20:39:01] casas carregadas
+[20:39:01] Anti-xiters carregados 
+[20:39:01] carros carregados
+[20:39:01] cofre orgs carregados
+[20:39:01] todos os carros posicionados
+[20:39:01]  _______________________________________
+[20:39:01] |                                       |
+[20:39:01] |»»       Brasil PlayHappy RPG        ««|
+[20:39:01] |---------------------------------------|••••
+[20:39:01] |»»         RPG versão 2.6a           ««|
+[20:39:02] |»»      Los Santos / San Fierro      ««|
+[20:39:02] |---------------------------------------|
+[20:39:02] |»»         by dimmy_scarface         ««|
+[20:39:02] |_______________________________________|
+[20:39:02]  
+[20:39:02] Number of vehicle models: 82
+[20:39:26] Incoming connection: 127.0.0.1:4913
+[20:39:26] [join] Sun_xD has joined the server (0:127.0.0.1)
+[20:39:26] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[20:39:29] Sun_xD logou no server.
+[20:44:06] 
+=================================================================
+[20:44:06] Servidor Desligado: [22/10/2012 20:44:06]
+[20:44:06] =================================================================
+
+[20:44:18] empresas com interiores carregadas
+[20:44:18] empresas sem interiores carregadas
+[20:44:18] organizacoes Carregadas
+[20:44:18] casas carregadas
+[20:44:18] Anti-xiters carregados 
+[20:44:18] carros carregados
+[20:44:19] cofre orgs carregados
+[20:44:19] todos os carros posicionados
+[20:44:19]  _______________________________________
+[20:44:19] |                                       |
+[20:44:19] |»»       Brasil PlayHappy RPG        ««|
+[20:44:19] |---------------------------------------|••••
+[20:44:19] |»»         RPG versão 2.6a           ««|
+[20:44:19] |»»      Los Santos / San Fierro      ««|
+[20:44:20] |---------------------------------------|
+[20:44:20] |»»         by dimmy_scarface         ««|
+[20:44:20] |_______________________________________|
+[20:44:20]  
+[20:44:20] Number of vehicle models: 82
+[20:44:20] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[20:44:23] Sun_xD logou no server.
+[20:46:41] 
+=================================================================
+[20:46:41] Servidor Desligado: [22/10/2012 20:46:41]
+[20:46:41] =================================================================
+
+[20:46:53] empresas com interiores carregadas
+[20:46:53] empresas sem interiores carregadas
+[20:46:53] organizacoes Carregadas
+[20:46:53] casas carregadas
+[20:46:53] Anti-xiters carregados 
+[20:46:53] carros carregados
+[20:46:54] cofre orgs carregados
+[20:46:54] todos os carros posicionados
+[20:46:54]  _______________________________________
+[20:46:54] |                                       |
+[20:46:54] |»»       Brasil PlayHappy RPG        ««|
+[20:46:54] |---------------------------------------|••••
+[20:46:54] |»»         RPG versão 2.6a           ««|
+[20:46:54] |»»      Los Santos / San Fierro      ««|
+[20:46:55] |---------------------------------------|
+[20:46:55] |»»         by dimmy_scarface         ««|
+[20:46:55] |_______________________________________|
+[20:46:55]  
+[20:46:55] Number of vehicle models: 82
+[20:46:55] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[20:46:58] Sun_xD logou no server.
+[20:49:11] 
+=================================================================
+[20:49:11] Servidor Desligado: [22/10/2012 20:49:11]
+[20:49:11] =================================================================
+
+[20:49:23] empresas com interiores carregadas
+[20:49:23] empresas sem interiores carregadas
+[20:49:23] organizacoes Carregadas
+[20:49:23] casas carregadas
+[20:49:23] Anti-xiters carregados 
+[20:49:23] carros carregados
+[20:49:24] cofre orgs carregados
+[20:49:24] todos os carros posicionados
+[20:49:24]  _______________________________________
+[20:49:24] |                                       |
+[20:49:24] |»»       Brasil PlayHappy RPG        ««|
+[20:49:24] |---------------------------------------|••••
+[20:49:24] |»»         RPG versão 2.6a           ««|
+[20:49:24] |»»      Los Santos / San Fierro      ««|
+[20:49:25] |---------------------------------------|
+[20:49:25] |»»         by dimmy_scarface         ««|
+[20:49:25] |_______________________________________|
+[20:49:25]  
+[20:49:25] Number of vehicle models: 82
+[20:49:25] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[20:49:28] Sun_xD logou no server.
+[20:53:56] AdmCmd: Respawn dado com sucesso por Sun_xD
+[20:54:08] 
+=================================================================
+[20:54:08] Servidor Desligado: [22/10/2012 20:54:08]
+[20:54:08] =================================================================
+
+[20:54:21] empresas com interiores carregadas
+[20:54:21] empresas sem interiores carregadas
+[20:54:21] organizacoes Carregadas
+[20:54:21] casas carregadas
+[20:54:21] Anti-xiters carregados 
+[20:54:21] carros carregados
+[20:54:21] cofre orgs carregados
+[20:54:22] todos os carros posicionados
+[20:54:22]  _______________________________________
+[20:54:22] |                                       |
+[20:54:22] |»»       Brasil PlayHappy RPG        ««|
+[20:54:22] |---------------------------------------|••••
+[20:54:22] |»»         RPG versão 2.6a           ««|
+[20:54:22] |»»      Los Santos / San Fierro      ««|
+[20:54:22] |---------------------------------------|
+[20:54:22] |»»         by dimmy_scarface         ««|
+[20:54:22] |_______________________________________|
+[20:54:22]  
+[20:54:22] Number of vehicle models: 82
+[20:54:22] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[20:54:26] Sun_xD logou no server.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[21:02:56] filterscripts = ""  (string)
+[21:02:56] password = ""  (string)
+[21:02:56] 
+[21:02:56] Server Plugins
+[21:02:56] --------------
+[21:02:56]  Loading plugin: streamer
+[21:02:56] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[21:02:56]   Loaded.
+[21:02:56]  Loaded 1 plugins.
+
+[21:02:56] 
+[21:02:56] Filterscripts
+[21:02:56] ---------------
+[21:02:56]   Loaded 0 filterscripts.
+
+[21:02:56] empresas com interiores carregadas
+[21:02:56] empresas sem interiores carregadas
+[21:02:56] organizacoes Carregadas
+[21:02:56] casas carregadas
+[21:02:56] Anti-xiters carregados 
+[21:02:56] carros carregados
+[21:02:57] cofre orgs carregados
+[21:02:57] todos os carros posicionados
+[21:02:57]  _______________________________________
+[21:02:57] |                                       |
+[21:02:57] |»»       Brasil PlayHappy RPG        ««|
+[21:02:57] |---------------------------------------|••••
+[21:02:57] |»»         RPG versão 2.6a           ««|
+[21:02:57] |»»      Los Santos / San Fierro      ««|
+[21:02:57] |---------------------------------------|
+[21:02:57] |»»         by dimmy_scarface         ««|
+[21:02:57] |_______________________________________|
+[21:02:57]  
+[21:02:57] Number of vehicle models: 82
+[21:03:41] Incoming connection: 127.0.0.1:1094
+[21:03:41] [join] Sun_xD has joined the server (0:127.0.0.1)
+[21:03:41] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[21:03:44] Sun_xD logou no server.
+[21:17:21] --- Server Shutting Down.
+[21:17:21] 
+=================================================================
+[21:17:21] Servidor Desligado: [22/10/2012 21:17:21]
+[21:17:21] =================================================================
+
+[21:17:21] [part] Sun_xD has left the server (0:0)
+[21:17:21] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[21:20:11] filterscripts = ""  (string)
+[21:20:11] password = ""  (string)
+[21:20:11] 
+[21:20:11] Server Plugins
+[21:20:11] --------------
+[21:20:11]  Loading plugin: streamer
+[21:20:11] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[21:20:11]   Loaded.
+[21:20:11]  Loaded 1 plugins.
+
+[21:20:11] 
+[21:20:11] Filterscripts
+[21:20:11] ---------------
+[21:20:11]   Loaded 0 filterscripts.
+
+[21:20:12] empresas com interiores carregadas
+[21:20:12] empresas sem interiores carregadas
+[21:20:12] organizacoes Carregadas
+[21:20:12] casas carregadas
+[21:20:12] Anti-xiters carregados 
+[21:20:12] carros carregados
+[21:20:12] cofre orgs carregados
+[21:20:12] todos os carros posicionados
+[21:20:12]  _______________________________________
+[21:20:12] |                                       |
+[21:20:12] |»»       Brasil PlayHappy RPG        ««|
+[21:20:12] |---------------------------------------|••••
+[21:20:12] |»»         RPG versão 2.6a           ««|
+[21:20:12] |»»      Los Santos / San Fierro      ««|
+[21:20:13] |---------------------------------------|
+[21:20:13] |»»         by dimmy_scarface         ««|
+[21:20:13] |_______________________________________|
+[21:20:13]  
+[21:20:13] Number of vehicle models: 82
+[21:20:19] --- Server Shutting Down.
+[21:20:19] 
+=================================================================
+[21:20:19] Servidor Desligado: [22/10/2012 21:20:19]
+[21:20:19] =================================================================
+
+[21:20:19] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[21:45:03] filterscripts = ""  (string)
+[21:45:03] password = ""  (string)
+[21:45:03] 
+[21:45:03] Server Plugins
+[21:45:03] --------------
+[21:45:03]  Loading plugin: streamer
+[21:45:03] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[21:45:03]   Loaded.
+[21:45:03]  Loaded 1 plugins.
+
+[21:45:03] 
+[21:45:03] Filterscripts
+[21:45:03] ---------------
+[21:45:03]   Loaded 0 filterscripts.
+
+[21:45:03] empresas com interiores carregadas
+[21:45:03] empresas sem interiores carregadas
+[21:45:03] organizacoes Carregadas
+[21:45:03] casas carregadas
+[21:45:03] Anti-xiters carregados 
+[21:45:03] carros carregados
+[21:45:03] cofre orgs carregados
+[21:45:03] todos os carros posicionados
+[21:45:03]  _______________________________________
+[21:45:03] |                                       |
+[21:45:03] |»»       Brasil PlayHappy RPG        ««|
+[21:45:03] |---------------------------------------|••••
+[21:45:03] |»»         RPG versão 2.6a           ««|
+[21:45:03] |»»      Los Santos / San Fierro      ««|
+[21:45:04] |---------------------------------------|
+[21:45:04] |»»         by dimmy_scarface         ««|
+[21:45:04] |_______________________________________|
+[21:45:04]  
+[21:45:04] Number of vehicle models: 82
+[21:45:26] Incoming connection: 127.0.0.1:1700
+[21:45:26] [join] Sun_xD has joined the server (0:127.0.0.1)
+[21:45:26] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[21:45:29] Sun_xD logou no server.
+[21:46:42] [part] Sun_xD has left the server (0:1)
+[21:46:46] --- Server Shutting Down.
+[21:46:46] 
+=================================================================
+[21:46:46] Servidor Desligado: [22/10/2012 21:46:46]
+[21:46:46] =================================================================
+
+[21:46:46] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[21:50:17] filterscripts = ""  (string)
+[21:50:17] password = ""  (string)
+[21:50:17] 
+[21:50:17] Server Plugins
+[21:50:17] --------------
+[21:50:17]  Loading plugin: streamer
+[21:50:17] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[21:50:17]   Loaded.
+[21:50:17]  Loaded 1 plugins.
+
+[21:50:17] 
+[21:50:17] Filterscripts
+[21:50:17] ---------------
+[21:50:17]   Loaded 0 filterscripts.
+
+[21:50:17] empresas com interiores carregadas
+[21:50:17] empresas sem interiores carregadas
+[21:50:17] organizacoes Carregadas
+[21:50:17] casas carregadas
+[21:50:17] Anti-xiters carregados 
+[21:50:17] carros carregados
+[21:50:17] cofre orgs carregados
+[21:50:17] todos os carros posicionados
+[21:50:17]  _______________________________________
+[21:50:17] |                                       |
+[21:50:17] |»»       Brasil PlayHappy RPG        ««|
+[21:50:17] |---------------------------------------|••••
+[21:50:18] |»»         RPG versão 2.6a           ««|
+[21:50:18] |»»      Los Santos / San Fierro      ««|
+[21:50:18] |---------------------------------------|
+[21:50:18] |»»         by dimmy_scarface         ««|
+[21:50:18] |_______________________________________|
+[21:50:18]  
+[21:50:18] Number of vehicle models: 82
+[21:50:38] Incoming connection: 127.0.0.1:1747
+[21:50:39] [join] Sun_xD has joined the server (0:127.0.0.1)
+[21:50:39] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[21:50:41] Sun_xD logou no server.
+[21:53:08] AdmCmd: Sun_xD Congelou Sun_xD
+[21:53:08] AdmCmd: Sun_xD Foi congelado por Sun_xD
+[21:53:22] AdmCmd: Sun_xD Congelou Sun_xD
+[21:53:22] AdmCmd: Sun_xD Foi congelado por Sun_xD
+[21:56:15] [part] Sun_xD has left the server (0:1)
+[21:57:08] Incoming connection: 127.0.0.1:1748
+[21:57:09] [join] Sun_xD has joined the server (0:127.0.0.1)
+[21:57:09] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[21:57:11] Sun_xD logou no server.
+[22:14:53] --- Server Shutting Down.
+[22:14:53] 
+=================================================================
+[22:14:53] Servidor Desligado: [22/10/2012 22:14:53]
+[22:14:53] =================================================================
+
+[22:14:53] [part] Sun_xD has left the server (0:0)
+[22:14:53] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:15:06] filterscripts = ""  (string)
+[22:15:06] password = ""  (string)
+[22:15:06] 
+[22:15:06] Server Plugins
+[22:15:06] --------------
+[22:15:06]  Loading plugin: streamer
+[22:15:06] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:15:06]   Loaded.
+[22:15:06]  Loaded 1 plugins.
+
+[22:15:06] 
+[22:15:06] Filterscripts
+[22:15:06] ---------------
+[22:15:06]   Loaded 0 filterscripts.
+
+[22:15:06] empresas com interiores carregadas
+[22:15:06] empresas sem interiores carregadas
+[22:15:06] organizacoes Carregadas
+[22:15:06] casas carregadas
+[22:15:06] Anti-xiters carregados 
+[22:15:06] carros carregados
+[22:15:06] cofre orgs carregados
+[22:15:06] todos os carros posicionados
+[22:15:06]  _______________________________________
+[22:15:06] |                                       |
+[22:15:06] |»»       Brasil PlayHappy RPG        ««|
+[22:15:06] |---------------------------------------|••••
+[22:15:07] |»»         RPG versão 2.6a           ««|
+[22:15:07] |»»      Los Santos / San Fierro      ««|
+[22:15:07] |---------------------------------------|
+[22:15:07] |»»         by dimmy_scarface         ««|
+[22:15:07] |_______________________________________|
+[22:15:07]  
+[22:15:07] Number of vehicle models: 82
+[22:15:25] Incoming connection: 127.0.0.1:1781
+[22:15:26] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:15:26] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:15:28] Sun_xD logou no server.
+[22:16:14] [part] Sun_xD has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:16:57] filterscripts = ""  (string)
+[22:16:57] password = ""  (string)
+[22:16:57] 
+[22:16:57] Server Plugins
+[22:16:57] --------------
+[22:16:57]  Loading plugin: streamer
+[22:16:57] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:16:57]   Loaded.
+[22:16:57]  Loaded 1 plugins.
+
+[22:16:57] 
+[22:16:57] Filterscripts
+[22:16:57] ---------------
+[22:16:57]   Loaded 0 filterscripts.
+
+[22:16:57] empresas com interiores carregadas
+[22:16:57] empresas sem interiores carregadas
+[22:16:57] organizacoes Carregadas
+[22:16:57] casas carregadas
+[22:16:57] Anti-xiters carregados 
+[22:16:57] carros carregados
+[22:16:57] cofre orgs carregados
+[22:16:57] todos os carros posicionados
+[22:16:57]  _______________________________________
+[22:16:57] |                                       |
+[22:16:57] |»»       Brasil PlayHappy RPG        ««|
+[22:16:57] |---------------------------------------|••••
+[22:16:58] |»»         RPG versão 2.6a           ««|
+[22:16:58] |»»      Los Santos / San Fierro      ««|
+[22:16:58] |---------------------------------------|
+[22:16:58] |»»         by dimmy_scarface         ««|
+[22:16:58] |_______________________________________|
+[22:16:58]  
+[22:16:58] Number of vehicle models: 82
+[22:17:25] Incoming connection: 127.0.0.1:1783
+[22:17:25] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:17:25] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:17:28] Sun_xD logou no server.
+[22:18:05] [part] Sun_xD has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:18:44] filterscripts = ""  (string)
+[22:18:44] password = ""  (string)
+[22:18:44] 
+[22:18:44] Server Plugins
+[22:18:44] --------------
+[22:18:44]  Loading plugin: streamer
+[22:18:44] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:18:44]   Loaded.
+[22:18:44]  Loaded 1 plugins.
+
+[22:18:44] 
+[22:18:44] Filterscripts
+[22:18:44] ---------------
+[22:18:44]   Loaded 0 filterscripts.
+
+[22:18:44] empresas com interiores carregadas
+[22:18:44] empresas sem interiores carregadas
+[22:18:44] organizacoes Carregadas
+[22:18:44] casas carregadas
+[22:18:44] Anti-xiters carregados 
+[22:18:44] carros carregados
+[22:18:44] cofre orgs carregados
+[22:18:44] todos os carros posicionados
+[22:18:44]  _______________________________________
+[22:18:44] |                                       |
+[22:18:44] |»»       Brasil PlayHappy RPG        ««|
+[22:18:44] |---------------------------------------|••••
+[22:18:44] |»»         RPG versão 2.6a           ««|
+[22:18:45] |»»      Los Santos / San Fierro      ««|
+[22:18:45] |---------------------------------------|
+[22:18:45] |»»         by dimmy_scarface         ««|
+[22:18:45] |_______________________________________|
+[22:18:45]  
+[22:18:45] Number of vehicle models: 82
+[22:19:14] Incoming connection: 127.0.0.1:1789
+[22:19:14] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:19:14] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:19:17] Sun_xD logou no server.
+[22:19:30] ***Sun_xD Saiu do servidor kickado ou banido.
+[22:19:30] [part] Sun_xD has left the server (0:2)
+[22:20:56] Incoming connection: 127.0.0.1:1790
+[22:20:56] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:20:56] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:21:00] Sun_xD logou no server.
+[22:21:42] ***Sun_xD Saiu do servidor kickado ou banido.
+[22:21:42] [part] Sun_xD has left the server (0:2)
+[22:22:54] Incoming connection: 127.0.0.1:1799
+[22:22:54] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:22:54] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:23:02] Sun_xD logou no server.
+[22:24:40] ***Sun_xD Saiu do servidor kickado ou banido.
+[22:24:40] [part] Sun_xD has left the server (0:2)
+[22:30:48] --- Server Shutting Down.
+[22:30:48] 
+=================================================================
+[22:30:48] Servidor Desligado: [22/10/2012 22:30:48]
+[22:30:48] =================================================================
+
+[22:30:48] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:30:50] filterscripts = ""  (string)
+[22:30:50] password = ""  (string)
+[22:30:50] 
+[22:30:50] Server Plugins
+[22:30:50] --------------
+[22:30:50]  Loading plugin: streamer
+[22:30:50] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:30:50]   Loaded.
+[22:30:50]  Loaded 1 plugins.
+
+[22:30:51] 
+[22:30:51] Filterscripts
+[22:30:51] ---------------
+[22:30:51]   Loaded 0 filterscripts.
+
+[22:30:51] empresas com interiores carregadas
+[22:30:51] empresas sem interiores carregadas
+[22:30:51] organizacoes Carregadas
+[22:30:51] casas carregadas
+[22:30:51] Anti-xiters carregados 
+[22:30:51] carros carregados
+[22:30:51] cofre orgs carregados
+[22:30:51] todos os carros posicionados
+[22:30:51]  _______________________________________
+[22:30:51] |                                       |
+[22:30:51] |»»       Brasil PlayHappy RPG        ««|
+[22:30:51] |---------------------------------------|••••
+[22:30:51] |»»         RPG versão 2.6a           ««|
+[22:30:51] |»»      Los Santos / San Fierro      ««|
+[22:30:52] |---------------------------------------|
+[22:30:52] |»»         by dimmy_scarface         ««|
+[22:30:52] |_______________________________________|
+[22:30:52]  
+[22:30:52] Number of vehicle models: 82
+[22:31:10] Incoming connection: 127.0.0.1:1805
+[22:31:10] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:31:10] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:31:13] Sun_xD logou no server.
+[22:31:49] --- Server Shutting Down.
+[22:31:49] 
+=================================================================
+[22:31:49] Servidor Desligado: [22/10/2012 22:31:49]
+[22:31:49] =================================================================
+
+[22:31:49] [part] Sun_xD has left the server (0:0)
+[22:31:49] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[22:35:59] filterscripts = ""  (string)
+[22:35:59] password = ""  (string)
+[22:35:59] 
+[22:35:59] Server Plugins
+[22:35:59] --------------
+[22:35:59]  Loading plugin: streamer
+[22:35:59] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[22:35:59]   Loaded.
+[22:35:59]  Loaded 1 plugins.
+
+[22:35:59] 
+[22:35:59] Filterscripts
+[22:35:59] ---------------
+[22:35:59]   Loaded 0 filterscripts.
+
+[22:35:59] empresas com interiores carregadas
+[22:35:59] empresas sem interiores carregadas
+[22:35:59] organizacoes Carregadas
+[22:35:59] casas carregadas
+[22:35:59] Anti-xiters carregados 
+[22:35:59] carros carregados
+[22:35:59] cofre orgs carregados
+[22:36:00] todos os carros posicionados
+[22:36:00]  _______________________________________
+[22:36:00] |                                       |
+[22:36:00] |»»       Brasil PlayHappy RPG        ««|
+[22:36:00] |---------------------------------------|••••
+[22:36:00] |»»         RPG versão 2.6a           ««|
+[22:36:00] |»»      Los Santos / San Fierro      ««|
+[22:36:00] |---------------------------------------|
+[22:36:00] |»»         by dimmy_scarface         ««|
+[22:36:00] |_______________________________________|
+[22:36:00]  
+[22:36:00] Number of vehicle models: 82
+[22:36:18] Incoming connection: 127.0.0.1:1806
+[22:36:19] [join] Sun_xD has joined the server (0:127.0.0.1)
+[22:36:19] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[22:36:21] Sun_xD logou no server.
+[22:36:30] [chat] [Sun_xD]: oi
+[22:39:55] --- Server Shutting Down.
+[22:39:55] 
+=================================================================
+[22:39:55] Servidor Desligado: [22/10/2012 22:39:55]
+[22:39:55] =================================================================
+
+[22:39:55] [part] Sun_xD has left the server (0:0)
+[22:39:55] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[14:33:45] filterscripts = ""  (string)
+[14:33:45] password = ""  (string)
+[14:33:45] 
+[14:33:45] Server Plugins
+[14:33:45] --------------
+[14:33:45]  Loading plugin: streamer
+[14:33:45] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[14:33:45]   Loaded.
+[14:33:45]  Loaded 1 plugins.
+
+[14:33:45] 
+[14:33:45] Filterscripts
+[14:33:45] ---------------
+[14:33:45]   Loaded 0 filterscripts.
+
+[14:33:45] empresas com interiores carregadas
+[14:33:45] empresas sem interiores carregadas
+[14:33:46] organizacoes Carregadas
+[14:33:46] casas carregadas
+[14:33:46] Anti-xiters carregados 
+[14:33:46] carros carregados
+[14:33:46] cofre orgs carregados
+[14:33:46] todos os carros posicionados
+[14:33:46]  _______________________________________
+[14:33:46] |                                       |
+[14:33:46] |»»       Brasil PlayHappy RPG        ««|
+[14:33:46] |---------------------------------------|••••
+[14:33:46] |»»         RPG versão 2.6a           ««|
+[14:33:46] |»»      Los Santos / San Fierro      ««|
+[14:33:46] |---------------------------------------|
+[14:33:47] |»»         by dimmy_scarface         ««|
+[14:33:47] |_______________________________________|
+[14:33:47]  
+[14:33:47] Number of vehicle models: 82
+[14:34:06] Incoming connection: 127.0.0.1:2196
+[14:34:07] [join] Sun_xD has joined the server (0:127.0.0.1)
+[14:34:07] AdmCmd: Sun_xD (IP: 127.0.0.1) conectou-se.
+[14:34:10] Sun_xD logou no server.
+[15:05:52] --- Server Shutting Down.
+[15:05:52] 
+=================================================================
+[15:05:52] Servidor Desligado: [23/10/2012 15:05:52]
+[15:05:52] =================================================================
+
+[15:05:52] [part] Sun_xD has left the server (0:0)
+[15:05:53] 
+
+*** Streamer Plugin v2.6.1 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[00:54:58] filterscripts = ""  (string)
+[00:54:58] password = ""  (string)
+[00:54:58] 
+[00:54:58] Server Plugins
+[00:54:58] --------------
+[00:54:58]  Loading plugin: streamer
+[00:54:58] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[00:54:58]   Loaded.
+[00:54:58]  Loaded 1 plugins.
+
+[00:54:58] 
+[00:54:58] Filterscripts
+[00:54:58] ---------------
+[00:54:58]   Loaded 0 filterscripts.
+
+[00:54:58] empresas com interiores carregadas
+[00:54:58] empresas sem interiores carregadas
+[00:54:58] organizacoes Carregadas
+[00:54:58] casas carregadas
+[00:54:58] Anti-xiters carregados 
+[00:54:58] carros carregados
+[00:54:58] cofre orgs carregados
+[00:54:58] todos os carros posicionados
+[00:54:58]  _______________________________________
+[00:54:58] |                                       |
+[00:54:58] |»»       Brasil PlayHappy RPG        ««|
+[00:54:58] |---------------------------------------|••••
+[00:54:58] |»»         RPG versão 2.6a           ««|
+[00:54:58] |»»      Los Santos / San Fierro      ««|
+[00:54:58] |---------------------------------------|
+[00:54:58] |»»         by dimmy_scarface         ««|
+[00:54:58] |_______________________________________|
+[00:54:58]  
+[00:54:58] Number of vehicle models: 82
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3e-R2, (C)2005-2012 SA-MP Team
+
+[00:55:41] filterscripts = ""  (string)
+[00:55:41] password = ""  (string)
+[00:55:41] 
+[00:55:41] Server Plugins
+[00:55:41] --------------
+[00:55:41]  Loading plugin: streamer
+[00:55:41] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[00:55:41]   Loaded.
+[00:55:41]  Loaded 1 plugins.
+
+[00:55:41] 
+[00:55:41] Filterscripts
+[00:55:41] ---------------
+[00:55:41]   Loaded 0 filterscripts.
+
+[00:55:41] empresas com interiores carregadas
+[00:55:41] empresas sem interiores carregadas
+[00:55:41] organizacoes Carregadas
+[00:55:41] casas carregadas
+[00:55:41] Anti-xiters carregados 
+[00:55:41] carros carregados
+[00:55:41] cofre orgs carregados
+[00:55:41] todos os carros posicionados
+[00:55:41]  _______________________________________
+[00:55:41] |                                       |
+[00:55:41] |»»       Brasil PlayHappy RPG        ««|
+[00:55:41] |---------------------------------------|••••
+[00:55:41] |»»         RPG versão 2.6a           ««|
+[00:55:41] |»»      Los Santos / San Fierro      ««|
+[00:55:41] |---------------------------------------|
+[00:55:41] |»»         by dimmy_scarface         ««|
+[00:55:41] |_______________________________________|
+[00:55:41]  
+[00:55:41] Number of vehicle models: 82
