@@ -10295,3 +10295,548 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [17:31:44] [connection] incoming connection: 127.0.0.1:64615 id: 0
 [17:31:44] [join] Mario_Tizz has joined the server (0:127.0.0.1)
 [17:33:43] [part] Mario_Tizz has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:14:51] 
+[23:14:51] Server Plugins
+[23:14:51] --------------
+[23:14:51]  Loading plugin: zcmd
+[23:14:51]   Failed.
+[23:14:51]  Loading plugin: sscanf
+[23:14:51] 
+
+[23:14:51]  ===============================
+
+[23:14:51]       sscanf plugin loaded.     
+
+[23:14:51]          Version:  2.8.3        
+
+[23:14:51]   (c) 2018 Alex "Y_Less" Cole  
+
+[23:14:51]  ===============================
+
+[23:14:51]   Loaded.
+[23:14:51]  Loading plugin: FCNPC
+[23:14:51] 
+[23:14:51] -------------------------------------------------
+[23:14:51]      FCNPC - Fully Controllable NPC v2.0.0
+[23:14:51]             Windows SA-MP 0.3.7 R2
+[23:14:51]            Jan  2 2019 at 23:09:26
+[23:14:51] 
+[23:14:51]   Author:       OrMisicL (2013 - 2015)
+[23:14:51]   Continued by: ziggi    (2016 - present)
+[23:14:51] 
+[23:14:51]   See full credits in the README.md file
+[23:14:51] -------------------------------------------------
+[23:14:51] 
+[23:14:51] Loading...
+[23:14:51] 
+[23:14:51] -------------------------------------------------
+[23:14:51]    ColAndreasv1.4.0
+[23:14:51] 
+[23:14:51]    Created By:
+[23:14:51]      [uL]Chris42O
+[23:14:51]      [uL]Slice
+[23:14:51]      [uL]Pottus
+[23:14:51] -------------------------------------------------
+[23:14:51] 
+[23:14:51] Loading...
+[23:14:51] ColAndreas v1.4.0 Loaded.
+[23:14:51]   Loaded.
+[23:14:51]  Loading plugin: mysql
+[23:14:52]  >> plugin.mysql: R41-4 successfully loaded.
+[23:14:52]   Loaded.
+[23:14:52]  Loaded 3 plugins.
+
+[23:14:52] 
+[23:14:52] Filterscripts
+[23:14:52] ---------------
+[23:14:52]   Loading filterscript 'gl_actions.amx'...
+[23:14:52] No collision data found.
+[23:14:52]   Loading filterscript 'gl_realtime.amx'...
+[23:14:52]   Loading filterscript 'gl_property.amx'...
+[23:14:52] 
+-----------------------------------
+[23:14:52] Grand Larceny Property Filterscript		
+[23:14:52] -----------------------------------
+
+[23:14:52]   Loading filterscript 'gl_mapicon.amx'...
+[23:14:52]   Loading filterscript 'ls_elevator.amx'...
+[23:14:52]   Loading filterscript 'attachments.amx'...
+[23:14:52]   Loading filterscript 'skinchanger.amx'...
+[23:14:52] 
+--Admin Player Skin Changer Loaded
+
+[23:14:52]   Loading filterscript 'vspawner.amx'...
+[23:14:52] 
+--Admin Vehicle Spawner Loaded
+
+[23:14:52]   Loading filterscript 'ls_mall.amx'...
+[23:14:52]   Loading filterscript 'ls_beachside.amx'...
+[23:14:52] 
+
+[23:14:52]   |---------------------------------------------------
+[23:14:52]   |--- LS BeachSide Filterscript
+[23:14:52]   |--  Script v1.03
+[23:14:52]   |--  19th April 2015
+[23:14:52]   |---------------------------------------------------
+[23:14:52]   |--  LS BeachSide Building Elevator created
+[23:14:52]   |---------------------------------------------------
+[23:14:52]   Loading filterscript 'clock.amx'...
+[23:14:52] 
+---------------------------------------
+[23:14:52]           Anti - Spawn Kill              
+[23:14:52]          Made by: ZaBraNjeNi            	
+[23:14:52]             L O A D E D                  
+[23:14:52] ---------------------------------------
+
+[23:14:52]   Loading filterscript 'flymode.amx'...
+[23:14:52]   Loading filterscript 'a51_base.amx'...
+[23:14:52] 
+
+[23:14:52]   |---------------------------------------------------
+[23:14:52]   |--- Area 51 (69) Building Objects Filterscript
+[23:14:52]   |--  Script v1.01
+[23:14:52]   |--  28th March 2015
+[23:14:52]   |---------------------------------------------------
+[23:14:52]   |--  Area 51 (69) Land object created
+[23:14:52]   |--  Area 51 (69) Fence object created
+[23:14:52]   |--  Area 51 (69) Building objects created
+[23:14:52]   |--  Area 51 (69) Gate objects created
+[23:14:52]   |--  Area 51 (69) Gates 3D Text Labels created
+[23:14:52]   |---------------------------------------------------
+[23:14:52]   Loaded 13 filterscripts.
+
+[23:14:52] Reading File: blank
+[23:14:52] Reading File: properties/houses.txt
+[23:14:52] Reading File: properties/businesses.txt
+[23:14:52] Reading File: properties/banks.txt
+[23:14:52] Reading File: properties/police.txt
+[23:14:52] 
+---------------------------------------
+[23:14:52] BLUE VS GREEN
+
+[23:14:52] ---------------------------------------
+
+[23:14:52] Number of vehicle models: 4
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:19:09] 
+[23:19:09] Server Plugins
+[23:19:09] --------------
+[23:19:09]  Loading plugin: zcmd
+[23:19:09]   Failed.
+[23:19:09]  Loading plugin: sscanf
+[23:19:09] 
+
+[23:19:09]  ===============================
+
+[23:19:09]       sscanf plugin loaded.     
+
+[23:19:09]          Version:  2.8.3        
+
+[23:19:09]   (c) 2018 Alex "Y_Less" Cole  
+
+[23:19:09]  ===============================
+
+[23:19:09]   Loaded.
+[23:19:09]  Loading plugin: FCNPC
+[23:19:09] 
+[23:19:09] -------------------------------------------------
+[23:19:09]      FCNPC - Fully Controllable NPC v2.0.0
+[23:19:09]             Windows SA-MP 0.3.7 R2
+[23:19:09]            Jan  2 2019 at 23:09:26
+[23:19:09] 
+[23:19:09]   Author:       OrMisicL (2013 - 2015)
+[23:19:09]   Continued by: ziggi    (2016 - present)
+[23:19:09] 
+[23:19:09]   See full credits in the README.md file
+[23:19:09] -------------------------------------------------
+[23:19:09] 
+[23:19:09] Loading...
+[23:19:09] 
+[23:19:09] -------------------------------------------------
+[23:19:09]    ColAndreasv1.4.0
+[23:19:09] 
+[23:19:09]    Created By:
+[23:19:09]      [uL]Chris42O
+[23:19:09]      [uL]Slice
+[23:19:09]      [uL]Pottus
+[23:19:09] -------------------------------------------------
+[23:19:09] 
+[23:19:09] Loading...
+[23:19:09] ColAndreas v1.4.0 Loaded.
+[23:19:09]   Loaded.
+[23:19:09]  Loading plugin: mysql
+[23:19:09]  >> plugin.mysql: R41-4 successfully loaded.
+[23:19:09]   Loaded.
+[23:19:09]  Loaded 3 plugins.
+
+[23:19:09] 
+[23:19:09] Filterscripts
+[23:19:09] ---------------
+[23:19:09]   Loading filterscript 'gl_actions.amx'...
+[23:19:09] No collision data found.
+[23:19:09]   Loading filterscript 'gl_realtime.amx'...
+[23:19:09]   Loading filterscript 'gl_property.amx'...
+[23:19:09] 
+-----------------------------------
+[23:19:09] Grand Larceny Property Filterscript		
+[23:19:09] -----------------------------------
+
+[23:19:09]   Loading filterscript 'gl_mapicon.amx'...
+[23:19:09]   Loading filterscript 'ls_elevator.amx'...
+[23:19:09]   Loading filterscript 'attachments.amx'...
+[23:19:09]   Loading filterscript 'skinchanger.amx'...
+[23:19:09] 
+--Admin Player Skin Changer Loaded
+
+[23:19:09]   Loading filterscript 'vspawner.amx'...
+[23:19:09] 
+--Admin Vehicle Spawner Loaded
+
+[23:19:09]   Loading filterscript 'ls_mall.amx'...
+[23:19:09]   Loading filterscript 'ls_beachside.amx'...
+[23:19:09] 
+
+[23:19:09]   |---------------------------------------------------
+[23:19:09]   |--- LS BeachSide Filterscript
+[23:19:09]   |--  Script v1.03
+[23:19:09]   |--  19th April 2015
+[23:19:09]   |---------------------------------------------------
+[23:19:09]   |--  LS BeachSide Building Elevator created
+[23:19:09]   |---------------------------------------------------
+[23:19:09]   Loading filterscript 'clock.amx'...
+[23:19:09] 
+---------------------------------------
+[23:19:09]           Anti - Spawn Kill              
+[23:19:09]          Made by: ZaBraNjeNi            	
+[23:19:09]             L O A D E D                  
+[23:19:09] ---------------------------------------
+
+[23:19:09]   Loading filterscript 'flymode.amx'...
+[23:19:09]   Loading filterscript 'a51_base.amx'...
+[23:19:09] 
+
+[23:19:09]   |---------------------------------------------------
+[23:19:09]   |--- Area 51 (69) Building Objects Filterscript
+[23:19:09]   |--  Script v1.01
+[23:19:09]   |--  28th March 2015
+[23:19:09]   |---------------------------------------------------
+[23:19:09]   |--  Area 51 (69) Land object created
+[23:19:09]   |--  Area 51 (69) Fence object created
+[23:19:09]   |--  Area 51 (69) Building objects created
+[23:19:09]   |--  Area 51 (69) Gate objects created
+[23:19:09]   |--  Area 51 (69) Gates 3D Text Labels created
+[23:19:09]   |---------------------------------------------------
+[23:19:09]   Loaded 13 filterscripts.
+
+[23:19:09] Reading File: blank
+[23:19:09] Reading File: properties/houses.txt
+[23:19:09] Reading File: properties/businesses.txt
+[23:19:09] Reading File: properties/banks.txt
+[23:19:09] Reading File: properties/police.txt
+[23:19:09] 
+---------------------------------------
+[23:19:09] BLUE VS GREEN
+
+[23:19:09] ---------------------------------------
+
+[23:19:09] Number of vehicle models: 4
+[23:19:11] 
+*** [FCNPC] Info: A newer version (v1.8.2) is available at https://github.com/ziggi/FCNPC/releases ***
+
+[23:19:28] [connection] 127.0.0.1:58660 requests connection cookie.
+[23:19:29] [connection] incoming connection: 127.0.0.1:58660 id: 0
+[23:19:29] [join] Mario_Tizz has joined the server (0:127.0.0.1)
+[23:22:00] [part] Mario_Tizz has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:26:42] 
+[23:26:42] Server Plugins
+[23:26:42] --------------
+[23:26:42]  Loading plugin: zcmd
+[23:26:42]   Failed.
+[23:26:42]  Loading plugin: sscanf
+[23:26:42] 
+
+[23:26:42]  ===============================
+
+[23:26:42]       sscanf plugin loaded.     
+
+[23:26:42]          Version:  2.8.3        
+
+[23:26:42]   (c) 2018 Alex "Y_Less" Cole  
+
+[23:26:42]  ===============================
+
+[23:26:42]   Loaded.
+[23:26:42]  Loading plugin: FCNPC
+[23:26:42] 
+[23:26:42] -------------------------------------------------
+[23:26:42]      FCNPC - Fully Controllable NPC v2.0.0
+[23:26:42]             Windows SA-MP 0.3.7 R2
+[23:26:42]            Jan  2 2019 at 23:09:26
+[23:26:42] 
+[23:26:42]   Author:       OrMisicL (2013 - 2015)
+[23:26:42]   Continued by: ziggi    (2016 - present)
+[23:26:42] 
+[23:26:42]   See full credits in the README.md file
+[23:26:42] -------------------------------------------------
+[23:26:42] 
+[23:26:42] Loading...
+[23:26:42] 
+[23:26:42] -------------------------------------------------
+[23:26:42]    ColAndreasv1.4.0
+[23:26:42] 
+[23:26:42]    Created By:
+[23:26:42]      [uL]Chris42O
+[23:26:42]      [uL]Slice
+[23:26:42]      [uL]Pottus
+[23:26:42] -------------------------------------------------
+[23:26:42] 
+[23:26:42] Loading...
+[23:26:42] ColAndreas v1.4.0 Loaded.
+[23:26:42]   Loaded.
+[23:26:42]  Loading plugin: mysql
+[23:26:42]  >> plugin.mysql: R41-4 successfully loaded.
+[23:26:42]   Loaded.
+[23:26:42]  Loaded 3 plugins.
+
+[23:26:42] 
+[23:26:42] Filterscripts
+[23:26:42] ---------------
+[23:26:42]   Loading filterscript 'gl_actions.amx'...
+[23:26:42] No collision data found.
+[23:26:42]   Loading filterscript 'gl_realtime.amx'...
+[23:26:42]   Loading filterscript 'gl_property.amx'...
+[23:26:42] 
+-----------------------------------
+[23:26:42] Grand Larceny Property Filterscript		
+[23:26:42] -----------------------------------
+
+[23:26:42]   Loading filterscript 'gl_mapicon.amx'...
+[23:26:42]   Loading filterscript 'ls_elevator.amx'...
+[23:26:42]   Loading filterscript 'attachments.amx'...
+[23:26:42]   Loading filterscript 'skinchanger.amx'...
+[23:26:42] 
+--Admin Player Skin Changer Loaded
+
+[23:26:42]   Loading filterscript 'vspawner.amx'...
+[23:26:42] 
+--Admin Vehicle Spawner Loaded
+
+[23:26:42]   Loading filterscript 'ls_mall.amx'...
+[23:26:42]   Loading filterscript 'ls_beachside.amx'...
+[23:26:42] 
+
+[23:26:42]   |---------------------------------------------------
+[23:26:42]   |--- LS BeachSide Filterscript
+[23:26:42]   |--  Script v1.03
+[23:26:42]   |--  19th April 2015
+[23:26:42]   |---------------------------------------------------
+[23:26:42]   |--  LS BeachSide Building Elevator created
+[23:26:42]   |---------------------------------------------------
+[23:26:42]   Loading filterscript 'clock.amx'...
+[23:26:42] 
+---------------------------------------
+[23:26:42]           Anti - Spawn Kill              
+[23:26:42]          Made by: ZaBraNjeNi            	
+[23:26:42]             L O A D E D                  
+[23:26:42] ---------------------------------------
+
+[23:26:42]   Loading filterscript 'flymode.amx'...
+[23:26:42]   Loading filterscript 'a51_base.amx'...
+[23:26:42] 
+
+[23:26:42]   |---------------------------------------------------
+[23:26:42]   |--- Area 51 (69) Building Objects Filterscript
+[23:26:42]   |--  Script v1.01
+[23:26:42]   |--  28th March 2015
+[23:26:42]   |---------------------------------------------------
+[23:26:42]   |--  Area 51 (69) Land object created
+[23:26:42]   |--  Area 51 (69) Fence object created
+[23:26:42]   |--  Area 51 (69) Building objects created
+[23:26:42]   |--  Area 51 (69) Gate objects created
+[23:26:42]   |--  Area 51 (69) Gates 3D Text Labels created
+[23:26:42]   |---------------------------------------------------
+[23:26:42]   Loaded 13 filterscripts.
+
+[23:26:42] Reading File: blank
+[23:26:42] Reading File: properties/houses.txt
+[23:26:42] Reading File: properties/businesses.txt
+[23:26:42] Reading File: properties/banks.txt
+[23:26:42] Reading File: properties/police.txt
+[23:26:42] 
+---------------------------------------
+[23:26:42] BLUE VS GREEN
+
+[23:26:42] ---------------------------------------
+
+[23:26:42] Number of vehicle models: 4
+[23:26:44] 
+*** [FCNPC] Info: A newer version (v1.8.2) is available at https://github.com/ziggi/FCNPC/releases ***
+
+[23:27:00] [connection] 127.0.0.1:63678 requests connection cookie.
+[23:27:01] [connection] incoming connection: 127.0.0.1:63678 id: 0
+[23:27:01] [join] Mario_Tizz has joined the server (0:127.0.0.1)
+[23:28:44] [part] Mario_Tizz has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[00:00:22] 
+[00:00:22] Server Plugins
+[00:00:22] --------------
+[00:00:22]  Loading plugin: zcmd
+[00:00:22]   Failed.
+[00:00:22]  Loading plugin: sscanf
+[00:00:22] 
+
+[00:00:22]  ===============================
+
+[00:00:22]       sscanf plugin loaded.     
+
+[00:00:22]          Version:  2.8.3        
+
+[00:00:22]   (c) 2018 Alex "Y_Less" Cole  
+
+[00:00:22]  ===============================
+
+[00:00:22]   Loaded.
+[00:00:22]  Loading plugin: FCNPC
+[00:00:22] 
+[00:00:22] -------------------------------------------------
+[00:00:22]      FCNPC - Fully Controllable NPC v2.0.0
+[00:00:22]             Windows SA-MP 0.3.7 R2
+[00:00:22]            Jan  2 2019 at 23:09:26
+[00:00:22] 
+[00:00:22]   Author:       OrMisicL (2013 - 2015)
+[00:00:22]   Continued by: ziggi    (2016 - present)
+[00:00:22] 
+[00:00:22]   See full credits in the README.md file
+[00:00:22] -------------------------------------------------
+[00:00:22] 
+[00:00:22] Loading...
+[00:00:22] 
+[00:00:22] -------------------------------------------------
+[00:00:22]    ColAndreasv1.4.0
+[00:00:22] 
+[00:00:22]    Created By:
+[00:00:22]      [uL]Chris42O
+[00:00:22]      [uL]Slice
+[00:00:22]      [uL]Pottus
+[00:00:22] -------------------------------------------------
+[00:00:22] 
+[00:00:22] Loading...
+[00:00:22] ColAndreas v1.4.0 Loaded.
+[00:00:22]   Loaded.
+[00:00:22]  Loading plugin: mysql
+[00:00:22]  >> plugin.mysql: R41-4 successfully loaded.
+[00:00:22]   Loaded.
+[00:00:22]  Loaded 3 plugins.
+
+[00:00:22] 
+[00:00:22] Filterscripts
+[00:00:22] ---------------
+[00:00:22]   Loading filterscript 'gl_actions.amx'...
+[00:00:22] No collision data found.
+[00:00:22]   Loading filterscript 'gl_realtime.amx'...
+[00:00:22]   Loading filterscript 'gl_property.amx'...
+[00:00:22] 
+-----------------------------------
+[00:00:22] Grand Larceny Property Filterscript		
+[00:00:22] -----------------------------------
+
+[00:00:22]   Loading filterscript 'gl_mapicon.amx'...
+[00:00:22]   Loading filterscript 'ls_elevator.amx'...
+[00:00:22]   Loading filterscript 'attachments.amx'...
+[00:00:22]   Loading filterscript 'skinchanger.amx'...
+[00:00:22] 
+--Admin Player Skin Changer Loaded
+
+[00:00:22]   Loading filterscript 'vspawner.amx'...
+[00:00:22] 
+--Admin Vehicle Spawner Loaded
+
+[00:00:22]   Loading filterscript 'ls_mall.amx'...
+[00:00:22]   Loading filterscript 'ls_beachside.amx'...
+[00:00:22] 
+
+[00:00:22]   |---------------------------------------------------
+[00:00:22]   |--- LS BeachSide Filterscript
+[00:00:22]   |--  Script v1.03
+[00:00:22]   |--  19th April 2015
+[00:00:22]   |---------------------------------------------------
+[00:00:22]   |--  LS BeachSide Building Elevator created
+[00:00:22]   |---------------------------------------------------
+[00:00:22]   Loading filterscript 'clock.amx'...
+[00:00:22] 
+---------------------------------------
+[00:00:22]           Anti - Spawn Kill              
+[00:00:22]          Made by: ZaBraNjeNi            	
+[00:00:22]             L O A D E D                  
+[00:00:22] ---------------------------------------
+
+[00:00:22]   Loading filterscript 'flymode.amx'...
+[00:00:22]   Loading filterscript 'a51_base.amx'...
+[00:00:22] 
+
+[00:00:22]   |---------------------------------------------------
+[00:00:22]   |--- Area 51 (69) Building Objects Filterscript
+[00:00:22]   |--  Script v1.01
+[00:00:22]   |--  28th March 2015
+[00:00:22]   |---------------------------------------------------
+[00:00:22]   |--  Area 51 (69) Land object created
+[00:00:22]   |--  Area 51 (69) Fence object created
+[00:00:22]   |--  Area 51 (69) Building objects created
+[00:00:22]   |--  Area 51 (69) Gate objects created
+[00:00:22]   |--  Area 51 (69) Gates 3D Text Labels created
+[00:00:22]   |---------------------------------------------------
+[00:00:22]   Loaded 13 filterscripts.
+
+[00:00:22] Reading File: blank
+[00:00:22] Reading File: properties/houses.txt
+[00:00:22] Reading File: properties/businesses.txt
+[00:00:22] Reading File: properties/banks.txt
+[00:00:22] Reading File: properties/police.txt
+[00:00:22] 
+---------------------------------------
+[00:00:22] BLUE VS GREEN
+
+[00:00:22] ---------------------------------------
+
+[00:00:22] Number of vehicle models: 4
+[00:00:24] 
+*** [FCNPC] Info: A newer version (v1.8.2) is available at https://github.com/ziggi/FCNPC/releases ***
+
+[00:00:41] [connection] 127.0.0.1:55676 requests connection cookie.
+[00:00:42] [connection] incoming connection: 127.0.0.1:55676 id: 0
+[00:00:43] [join] Mario_Tizz has joined the server (0:127.0.0.1)
+[00:02:00] [part] Mario_Tizz has left the server (0:1)

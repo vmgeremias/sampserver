@@ -537,7 +537,7 @@ public OnPlayerDisconnect(playerid,reason)
    	dini_Set(file, "Itens", string);
    	dini_IntSet(file, "Nivel", Nivel[playerid]);
  	dini_IntSet(file, "Exp", Exp[playerid]);
- 	dini_IntSet(file, "Money", Money[playerid]);
+ 	dini_IntSet(file, "Money", GetPlayerMoney(playerid));
    	dini_IntSet(file, "Tempo_Cadeia", cadeia[playerid][0][0]);
    	dini_Set(file, "Motivo_Cadeia", cadeia[playerid][1]);
    	
@@ -680,7 +680,7 @@ CMD:perfil(playerid,params[]){
     GetPlayerName(playerid, name, MAX_PLAYER_NAME);
  	format(str,sizeof(str),"Perfil de %s:",name);
  	SendClientMessage(playerid, COLOR_AQUAMARINE,str);
-	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Money: $%i",Nivel[playerid],Exp[playerid],Money[playerid]);
+	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Money: $%i",Nivel[playerid],Exp[playerid],GetPlayerMoney(playerid));
     SendClientMessage(playerid, COLOR_AQUAMARINE, str);
     return 1;
 }
@@ -697,7 +697,7 @@ CMD:verperfil(playerid,params[]){
 	GetPlayerName(id, name, MAX_PLAYER_NAME);
  	format(str,sizeof(str),"Perfil de %s:",name);
  	SendClientMessage(playerid, COLOR_AQUAMARINE,str);
-	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Money: $%i",Nivel[id],Exp[id],Money[id]);
+	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Money: $%i",Nivel[id],Exp[id],GetPlayerMoney(id));
     SendClientMessage(playerid, COLOR_AQUAMARINE, str);
     return 1;
 }
@@ -914,7 +914,7 @@ CMD:armas(playerid, params[]){
 	}
 
 	if(type == 1){
-        SendClientMessage(playerid,0xd64541 ,"Você Recebeu o Pacote 1!");
+        SendClientMessage(playerid,COLOR_GREEN ,"Você Recebeu o Pacote 1!");
 		GivePlayerWeapon(playerid,Desert_Eagle,99999);
 		GivePlayerWeapon(playerid,M4,99999);
 		GivePlayerWeapon(playerid,MP5,99999);
@@ -922,7 +922,7 @@ CMD:armas(playerid, params[]){
 		GivePlayerWeapon(playerid,Knife,1);
 	}
 	if(type == 2){
-        SendClientMessage(playerid,0xd64541 ,"Você Recebeu o Pacote 2!");
+        SendClientMessage(playerid,COLOR_GREEN ,"Você Recebeu o Pacote 2!");
 		GivePlayerWeapon(playerid,Pistol,99999);
 		GivePlayerWeapon(playerid,Sawnoff_Shotgun,99999);
 		GivePlayerWeapon(playerid,Micro_SMG,99999);
@@ -1060,7 +1060,7 @@ CMD:empregar(playerid, params[]){
 			ShowPlayerDialog(playerid, 1, DIALOG_STYLE_MSGBOX, "Mecanico", str, "Ok", "Cancelar");
 		}
 	} else {
-        SendClientMessage(playerid,0xd64541 ,"Voce Ja Possui Um Emprego, /sairemprego");
+        SendClientMessage(playerid,COLOR_RED ,"Voce Ja Possui Um Emprego, /sairemprego");
 	}
 	return 1;
 }
@@ -1087,25 +1087,34 @@ CMD:trabalhar(playerid, params[]){
  	if(Profissoes[playerid][0] == 0) {
         SendClientMessage(playerid, COLOR_RED ,"Você Não Possui um Emprego");
 	}
-	if(Profissoes[playerid][0] == ENTREGADOR_PIZZA && Profissoes[playerid][1] == 0) {
-	    if(pizza[playerid] == 0){
-        	if(IsPlayerInRangeOfPoint(playerid, 3.0, 2116.9954,-1788.4574,13.5547)) {
-        		if(GetVehicleModel(GetPlayerVehicleID(playerid)) == 448)
-	    		{
-					pizza[playerid] = 3;
-					new value = random(3);
-					new Float:randowP[3][3] = {{2062.8569,-1820.7913,13.5469},{2089.3984,-1905.5582,13.5469},{2151.2695,-1902.4280,13.5507}};
-					house[playerid] = SetPlayerCheckpoint(playerid, randowP[value][0], randowP[value][1],randowP[value][2], 3.0);
-                    Profissoes[playerid][1] = 1;
-					SendClientMessage(playerid, -1 ,"Casa marcada!");
+	if(Profissoes[playerid][0] == ENTREGADOR_PIZZA) {
+ 		if(Profissoes[playerid][1] == 0){
+		    if(pizza[playerid] == 0){
+	        	if(IsPlayerInRangeOfPoint(playerid, 3.0, 2116.9954,-1788.4574,13.5547)) {
+	        		if(GetVehicleModel(GetPlayerVehicleID(playerid)) == 448)
+		    		{
+						pizza[playerid] = 3;
+						new value = random(3);
+						new Float:randowP[3][3] = {{2062.8569,-1820.7913,13.5469},{2089.3984,-1905.5582,13.5469},{2151.2695,-1902.4280,13.5507}};
+						house[playerid] = SetPlayerCheckpoint(playerid, randowP[value][0], randowP[value][1],randowP[value][2], 3.0);
+	                    Profissoes[playerid][1] = 1;
+						SendClientMessage(playerid, COLOR_WHITE ,"Casa Marcada!");
+						SendClientMessage(playerid, COLOR_WHITE ,"Use /trabalhar Novamente Para Parar de Trabalhar");
+						
+					} else {
+		                SendClientMessage(playerid, COLOR_RED ,"Você Não Está Usando a Lambreta das Pizzas");
+					}
 				} else {
-	                SendClientMessage(playerid, COLOR_RED ,"Você Não Está Usando a Lambreta das Pizzas");
+		            SendClientMessage(playerid, COLOR_RED ,"Você Não Está na Pizzaria");
 				}
 			} else {
-	            SendClientMessage(playerid, COLOR_RED ,"Você Não Está na Pizzaria");
+	            SendClientMessage(playerid, COLOR_RED ,"Você Ainda Possui Pizzas para Entregar");
 			}
 		} else {
-            SendClientMessage(playerid, COLOR_RED ,"Você Ainda Possui Pizzas para Entregar");
+			DisablePlayerCheckpoint(playerid);
+			pizza[playerid] = 0;
+			Profissoes[playerid][1] = 0;
+			SendClientMessage(playerid, COLOR_GREEN,"Você Parou de Trabalhar");
 		}
 	}
 	return 1;
@@ -1188,7 +1197,7 @@ CMD:jetpack(playerid, params[]){
 }
 
 CMD:sairemprego(playerid, params[]){
-	SendClientMessage(playerid, -1, "Agora você esta desempregado");
+	SendClientMessage(playerid, COLOR_WHITE, "Agora Você Está Desempregado");
 	Profissoes[playerid][0] = 0;
 	new file[128], pName[MAX_PLAYER_NAME]; // Recriamos as mesmas variaveis,só que em publics diferentes.
    	GetPlayerName(playerid, pName, MAX_PLAYER_NAME); // Pegamos o nome da pessoa e guardamos em pName.
@@ -1204,7 +1213,7 @@ CMD:blindar(playerid, params[]){
 	        new veh = GetPlayerVehicleID(playerid);
 	        Blind[veh] = 100;
 	        RepairVehicle(veh);
-			SendClientMessage(playerid,0xb64271 ,"veiculo blindado!");
+			SendClientMessage(playerid,COLOR_GREEN ,"Veiculo Blindado!");
 			format(string,sizeof(string), "    %i%",Blind[veh]);
 			TextDrawSetString(TDEditor_TD[playerid][6], string);
 			return 1;
@@ -1627,7 +1636,7 @@ ClassSel_SetupCharSelection(playerid)
    	if(gPlayerCitySelection[playerid] == PLAYER_GREEN) {
 		SetPlayerInterior(playerid,3);
 		SetPlayerPos(playerid,-2673.8381,1399.7424,918.3516);
-		SetPlayerColor(playerid,0x008b00);
+		SetPlayerColor(playerid,COLOR_GREEN);
 		SetPlayerFacingAngle(playerid,181.0);
     	SetPlayerCameraPos(playerid,-2673.2776,1394.3859,918.3516);
 		SetPlayerCameraLookAt(playerid,-2673.8381,1399.7424,918.3516);
@@ -1635,7 +1644,7 @@ ClassSel_SetupCharSelection(playerid)
 	else if(gPlayerCitySelection[playerid] == PLAYER_BLUE) {
 		SetPlayerInterior(playerid,3);
 		SetPlayerPos(playerid,-2673.8381,1399.7424,918.3516);
-		SetPlayerColor(playerid,0x008b00);
+		SetPlayerColor(playerid,COLOR_BLUE);
 		SetPlayerFacingAngle(playerid,181.0);
     	SetPlayerCameraPos(playerid,-2673.2776,1394.3859,918.3516);
 		SetPlayerCameraLookAt(playerid,-2673.8381,1399.7424,918.3516);
@@ -2074,26 +2083,26 @@ public OnPlayerEnterCheckpoint(playerid)
     DisablePlayerCheckpoint(playerid);
 	if(Profissoes[playerid][0] == ENTREGADOR_PIZZA && Profissoes[playerid][1] == 1){
 		if(pizza[playerid] > 1){
-			SendClientMessage(playerid,0xb64271 ,"Você recebeu 1000$ pela pizza!");
+			SendClientMessage(playerid,COLOR_GREEN ,"Você Recebeu 1000$ Pela Pizza!");
 			PlayerPlaySound(playerid, 1150, 0.0, 0.0, 10.0);
 	  		GivePlayerMoney(playerid, 1000);
 			new value = random(3);
 			new Float:randowP[3][3] = {{2062.8569,-1820.7913,13.5469},{2089.3984,-1905.5582,13.5469},{2151.2695,-1902.4280,13.5507}};
 			house[playerid] = SetPlayerCheckpoint(playerid, randowP[value][0], randowP[value][1],randowP[value][2], 3.0);
-			SendClientMessage(playerid, -1 ,"Nova casa marcada!");
+			SendClientMessage(playerid, COLOR_WHITE ,"Nova Casa Marcada!");
 			new str[128];
 			format(str, sizeof(str), "Pizzas: %i", pizza[playerid]-1);
 			SendClientMessage(playerid, -1 ,str);
 			pizza[playerid]--;
 		} else {
-	 		SendClientMessage(playerid,0xb64271 ,"Você recebeu 1000$ pela pizza!");
+	 		SendClientMessage(playerid,COLOR_GREEN ,"Você Recebeu 1000$ Pela Pizza!");
 	   		GivePlayerMoney(playerid, 1000);
 			pizza[playerid] = 0;
 			Profissoes[playerid][1] = 0;
 			new str[128];
 			format(str, sizeof(str), "Pizzas: %i", pizza[playerid]);
-			SendClientMessage(playerid, -1 ,str);
-			SendClientMessage(playerid, COLOR_RED ,"Suas Pizzas Acabaram, volte na pizzaria para pegar mais");
+			SendClientMessage(playerid, COLOR_WHITE ,str);
+			SendClientMessage(playerid, COLOR_RED ,"Suas Pizzas Acabaram, Volte na Pizzaria Para Pegar Mais");
 			PlayerPlaySound(playerid, 1150, 0.0, 0.0, 10.0);
 			DisablePlayerCheckpoint(playerid);
 		}
