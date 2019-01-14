@@ -101,7 +101,7 @@ public time()
 {
 	new string[256], year, month, day, hours, minutes, seconds;
 	getdate(year, month, day), gettime(hours, minutes, seconds);
-	format(string, sizeof string, "%s%d/%s%d/%s%d",((month < day) ? ("0") : ("")) ,day, ((month < 10) ? ("0") : ("")), month, (year < 10) ? ("0") : (""), year);
+	format(string, sizeof string, "%s%d/%s%d/%s%d",((day < 10) ? ("0") : ("")) ,day, ((month < 10) ? ("0") : ("")), month, (year < 10) ? ("0") : (""), year);
 	TextDrawSetString(Date, string);
 	format(string, sizeof string, "%s%d:%s%d:%s%d", (hours < 10) ? ("0") : (""), hours, (minutes < 10) ? ("0") : (""), minutes, (seconds < 10) ? ("0") : (""), seconds);
 	TextDrawSetString(Time, string);

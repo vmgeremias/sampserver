@@ -139,14 +139,15 @@ new Float:PlayerInfo[MAX_PLAYERS][1];
 new Float:Profissoes[MAX_PLAYERS][2];
 new PlayerCar[MAX_PLAYERS][1];
 
+new zone;
+
 new house[MAX_PLAYERS];
 new Bomb[MAX_PLAYERS];
 new Money[MAX_PLAYERS];
 
 new Float:velocidade[MAX_PLAYERS];
-new TimerVelocimetro[MAX_PLAYERS];
 
-new TimerLataria[MAX_PLAYERS];
+new TimerVehicle[MAX_PLAYERS];
 new TimerCadeia[MAX_PLAYERS];
 
 new Tempo = TEMPO_PARTIDA;
@@ -166,6 +167,7 @@ new Text:Pontuacao[5];
 new Text:TextCadeia[MAX_PLAYERS][4];
 new PBlue;
 new PGreen;
+new Casa[100][512];
 
 #define MINIGUNMODEL 362
 #define FLAMETHMODEL 361
@@ -257,21 +259,7 @@ public OnPlayerConnect(playerid)
 	gPlayerLastCitySelectionTick[playerid] = GetTickCount();
 
 	SetPlayerMapIcon(playerid, 95, 2455.2834,-1461.1854,24.0000, 27, 0, 0);
-	AddStaticPickup(3096, 1, 2455.2834,-1461.1854,24.0000, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Blindagem\n/blindar Para Blindar", COLOR_ORANGE, 2455.2834,-1461.1854,24.0000, 15.0, 0);
 	
-	SetPlayerMapIcon(playerid, 96, 2096.8438,-1806.5330,13.5529, 29, 0, 0);
-	AddStaticPickup(1582, 1, 2116.9954,-1788.4574,13.5547, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Pizzas\n/trabalhar para pegar as pizzas", COLOR_ORANGE, 2116.9954,-1788.4574,13.5547, 15.0, 0);
-	
-	AddStaticPickup(1239, 1, 2096.8438,-1806.5330,13.5529, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Entregador de Pizzas\n/empregar para ser entregador", COLOR_ORANGE, 2096.8438,-1806.5330,13.5529, 15.0, 0);
-	
-	AddStaticPickup(1274, 1, 2487.5032,-1519.0341,23.9922, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Local de Entrega\nTraga os veiculos e digite /venderpecas", COLOR_ORANGE, 2487.5032,-1519.0341,23.9922, 15.0, 0);
-	
-	AddStaticPickup(1239, 1,2442.9648,-1550.4795,23.9976, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Mecanico\n/empregar Para Ser um Mecanico", COLOR_ORANGE, 2442.9648,-1550.4795,23.9976, 15.0, 0);
 
 
 
@@ -362,6 +350,7 @@ public OnPlayerSpawn(playerid)
 		check[playerid] = 1;
 		Money[playerid] = dini_Int(file, "Money");
 		GivePlayerMoney(playerid,Money[playerid]);
+		GangZoneShowForPlayer(playerid, zone, COLOR_CONTROLDARK);
 		
 		Pontuacao[0] = TextDrawCreate(0.833350, 200.888748, "_");
 		TextDrawLetterSize(Pontuacao[0], 0.429165, 9.299992);
@@ -613,6 +602,43 @@ CMD:colour(playerid,params[])
         format(string,sizeof(string),"this is colour %d.",colourID);
         SendClientMessage(playerid, VehicleColoursTableRGBA[colourID], string);
     }
+    return 1;
+}
+
+CMD:entrar(playerid,params[])
+{
+    if(IsPlayerInRangeOfPoint(playerid, 5.0,2062.8569,-1820.7913,13.5469)){
+        new pName[MAX_PLAYER_NAME];
+   		GetPlayerName(playerid, pName, MAX_PLAYER_NAME);
+		if(!strcmp(Casa[0], pName)){
+            SetPlayerInterior(playerid,3);
+			SetPlayerPos(playerid,2496.049804,-1695.238159,1014.742187);
+		} else {
+			return SendClientMessage(playerid, COLOR_RED, "Está Casa Não É Sua");
+		}
+	}
+	
+	if(IsPlayerInRangeOfPoint(playerid, 5.0,2496.049804,-1695.238159,1014.742187)){
+ 		SetPlayerInterior(playerid,0);
+		SetPlayerPos(playerid,2062.8569,-1820.7913,13.5469);
+	}
+	return 1;
+}
+
+CMD:darponto(playerid,params[])
+{
+	new type,qnt;
+    if(sscanf(params,"ii",type,qnt) && (type != 0 || type != 1) && qnt != 0)
+    {
+        return SendClientMessage(playerid, COLOR_RED, "Use: /darponto [0-Blue ou 1-Green] [Quantidade]");
+    }
+	if(type == 0){
+		PBlue = PBlue + qnt;
+		SendClientMessage(playerid, COLOR_BLUE, "Pontos Dados");
+	} else {
+        PGreen = PGreen + qnt;
+        SendClientMessage(playerid, COLOR_GREEN, "Pontos Dados");
+	}
     return 1;
 }
 
@@ -1165,7 +1191,7 @@ CMD:detonar(playerid, params[]){
      	Bomb[playerid] = 0;
 		SetPlayerHealth(playerid,0);
 	} else {
-        SendClientMessage(playerid, COLOR_RED ,"Voce não possui uma bomba!");
+        SendClientMessage(playerid, COLOR_RED ,"Você Não Possui Uma Bomba!");
 	}
 	return 1;
 }
@@ -1404,17 +1430,6 @@ public VerificarVeiculo(playerid)
     
     return 1;
 }
-forward VelocimetroFunc(playerid);
-public VelocimetroFunc(playerid){
-    new string[128];
-    new Float:vX,Float:vY,Float:vZ;
-    new vehid = GetPlayerVehicleID(playerid);
-    GetVehicleVelocity(vehid,vX,vY,vZ);
-    velocidade[playerid] = floatsqroot((vX*vX) + (vY*vY) + (vZ*vZ)) * 180.13;
-	format(string, sizeof(string), "Velocidade: %.0f KM/H", velocidade[playerid]);
-	TextDrawSetString(TDEditor_TD[playerid][7],string);
-}
-
 forward CadeiaFunc(playerid);
 public CadeiaFunc(playerid){
 	cadeia[playerid][0][0]--;
@@ -1433,16 +1448,37 @@ public CadeiaFunc(playerid){
 	}
 }
 
-forward LatariaFunc(playerid);
-public LatariaFunc(playerid){
- 	new Float:health;
+forward VehicleFunc(playerid);
+public VehicleFunc(playerid){
+
+	
+    new string[128];
+    new Float:vX,Float:vY,Float:vZ;
     new veh = GetPlayerVehicleID(playerid);
+    new Float:health;
+    
+    //velocimetro
+    GetVehicleVelocity(veh,vX,vY,vZ);
+    velocidade[playerid] = floatsqroot((vX*vX) + (vY*vY) + (vZ*vZ)) * 180.13;
+	format(string, sizeof(string), "Velocidade: %.0f KM/H", velocidade[playerid]);
+	TextDrawSetString(TDEditor_TD[playerid][7],string);
+	
+	//lataria
     GetVehicleHealth(veh, health);
     health = health / 10;
-    new result[128];
-	format(result,sizeof(result),"Lataria: %.0f%",health);
-	TextDrawSetString(TDEditor_TD[playerid][5], result);
+	format(string,sizeof(string),"Lataria: %.0f%",health);
+	TextDrawSetString(TDEditor_TD[playerid][5], string);
+	
+	//blindagem
+    GetVehicleHealth(veh, health);
+    if(Blind[veh] > 0 && health < 1000){
+		Blind[veh] = Blind[veh] - 5;
+		RepairVehicle(veh);
+		format(string, sizeof(string), "    %d%", Blind[veh]);
+		TextDrawSetString(TDEditor_TD[playerid][6], string);
+	}
 }
+
 
 
 public OnPlayerStateChange(playerid, newstate, oldstate) {
@@ -1450,8 +1486,7 @@ public OnPlayerStateChange(playerid, newstate, oldstate) {
 
     VerificarVeiculo(playerid);
 
-    TimerVelocimetro[playerid] = SetTimer("VelocimetroFunc", 100, true);
-    TimerLataria[playerid] = SetTimer("LatariaFunc", 2000, true);
+    TimerVehicle[playerid] = SetTimer("VehicleFunc", 100, true);
     
     TDEditor_TD[playerid][0] = TextDrawCreate(511.249877, 311.333099, "INFO_VEICULO");
 	TextDrawLetterSize(TDEditor_TD[playerid][0], 0.400000, 1.600000);
@@ -1569,32 +1604,13 @@ public OnPlayerStateChange(playerid, newstate, oldstate) {
 		for(j = 0;j < 8;j++){
 			TextDrawHideForPlayer(playerid, TDEditor_TD[playerid][j]);
 		}
-  		KillTimer(TimerVelocimetro[playerid]);
+  		KillTimer(TimerVehicle[playerid]);
 	}
 }
 
 public OnPlayerEditAttachedObject(playerid, response, index, modelid, boneid, Float:fOffsetX, Float:fOffsetY, Float:fOffsetZ, Float:fRotX, Float:fRotY, Float:fRotZ, Float:fScaleX, Float:fScaleY, Float:fScaleZ)
 {
     return 1;
-}
-
-public OnVehicleDamageStatusUpdate(vehicleid, playerid) {
-	new string[50];
- 	new Float:health;
-    new veh = GetPlayerVehicleID(playerid);
-    GetVehicleHealth(veh, health);
-    health = health / 10;
-    new result[128];
-	format(result,sizeof(result),"Lataria: %.0f%",health);
-	TextDrawSetString(TDEditor_TD[playerid][5], result);
-	format(string, sizeof(string), "    %d%", Blind[veh]);
-	TextDrawSetString(TDEditor_TD[playerid][6], string);
-	if(Blind[veh] > 0) {
-		Blind[veh] --;
-		format(string, sizeof(string), "    %d%", Blind[veh]);
-		TextDrawSetString(TDEditor_TD[playerid][6], string);
-		RepairVehicle(veh);
-	}
 }
 
 public OnPlayerDeath(playerid, killerid, reason)
@@ -1815,6 +1831,37 @@ public OnGameModeInit()
 	//ManualVehicleEngineAndLights();
 	//LimitGlobalChatRadius(300.0);
 	
+	new file[128];
+   	format(file, sizeof(file), "casas/casas.ini"); // Formatamos o caminho para o dini dentro da var file
+	new str[512];
+   	Casa[0] = dini_Get(file, "Casa_0");
+	
+ 	zone = GangZoneCreate(1976.4213,-1351.4966, 1862.1624,-1451.2772);
+ 	
+ 	AddStaticPickup(3096, 1, 2455.2834,-1461.1854,24.0000, 0);
+	Create3DTextLabel("{43BBDE}\n{FF7F00}Blindagem\n/blindar Para Blindar", COLOR_ORANGE, 2455.2834,-1461.1854,24.0000, 15.0, 0);
+
+	AddStaticPickup(1582, 1, 2116.9954,-1788.4574,13.5547, 0);
+	Create3DTextLabel("{43BBDE}\n{FF7F00}Pizzas\n/trabalhar para pegar as pizzas", COLOR_ORANGE, 2116.9954,-1788.4574,13.5547, 15.0, 0);
+
+	AddStaticPickup(1239, 1, 2096.8438,-1806.5330,13.5529, 0);
+	Create3DTextLabel("{43BBDE}\n{FF7F00}Entregador de Pizzas\n/empregar para ser entregador", COLOR_ORANGE, 2096.8438,-1806.5330,13.5529, 15.0, 0);
+
+	AddStaticPickup(1274, 1, 2487.5032,-1519.0341,23.9922, 0);
+	Create3DTextLabel("{43BBDE}\n{FF7F00}Local de Entrega\nTraga os veiculos e digite /venderpecas", COLOR_ORANGE, 2487.5032,-1519.0341,23.9922, 15.0, 0);
+
+	AddStaticPickup(1239, 1,2442.9648,-1550.4795,23.9976, 0);
+	Create3DTextLabel("{43BBDE}\n{FF7F00}Mecanico\n/empregar Para Ser um Mecanico", COLOR_ORANGE, 2442.9648,-1550.4795,23.9976, 15.0, 0);
+
+	format(str,sizeof(str),"{43BBDE}\n{FF7F00}Casa: 0\nDono: %s\n/entrar Para Entrar Na Casa",Casa[0]);
+ 	AddStaticPickup(1272, 1,2062.8569,-1820.7913,13.5469, 0);
+	Create3DTextLabel(str, COLOR_ORANGE, 2062.8569,-1820.7913,13.5469, 15.0, 0);
+	
+	AddStaticPickup(1239, 1,2442.9648,-1550.4795,23.9976, 0);
+	Create3DTextLabel("{43BBDE}\n{FF7F00}Saida\n/entrar Para Sair da Casa", COLOR_ORANGE, 2496.049804,-1695.238159,1014.742187, 15.0, 0);
+	
+	
+	
 	//car green
 	VGreen[0] = CreateVehicle(560, 1841.7278,-1361.8839,13.5625,359.2195, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 0
 	VGreen[1] = CreateVehicle(560, 1841.6176,-1393.9387,13.5625,0.1596, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 1
@@ -1823,7 +1870,6 @@ public OnGameModeInit()
 	VGreen[4] = CreateVehicle(560, 1856.8329,-1387.7483,13.3906,0.1596, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 4
 	VGreen[5] = CreateVehicle(447, 1825.9741,-1372.9065,14.4219,268.6653, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 5
 	
-	new str[24];
 	for(new i = 0;i < 5;i++){
 		format(str,sizeof(str),"GREEN-%i",VGreen[i]);
 		SetVehicleNumberPlate(VGreen[i], str);
@@ -2026,6 +2072,17 @@ public OnGameModeExit()
 
 forward TimeP();
 public TimeP(){
+
+	if(PBlue > PGreen){
+ 		GangZoneShowForAll(zone, COLOR_BLUE);
+	}
+	if(PBlue < PGreen){
+        GangZoneShowForAll(zone, COLOR_GREEN);
+	}
+	if(PBlue == PGreen){
+        GangZoneShowForAll(zone, COLOR_CONTROLDARK);
+	}
+		
 	if(Tempo == (TEMPO_PARTIDA/2)){
         SendClientMessageToAll(COLOR_PURPLE, "Uma Arma Especial Foi Spawnada No Meio do Território!");
         new value = random(3);
