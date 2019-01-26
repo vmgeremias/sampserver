@@ -240,7 +240,7 @@ public OnPlayerConnect(playerid)
   	GameTextForPlayer(playerid,"~w~BEM VINDO AO ~b~BLUE ~w~VS ~g~GREEN",7000,4);
 
   	PlayAudioStreamForPlayer(playerid, "http://hcmaslov.d-real.sci-nnov.ru/public/mp3/Rammstein/Rammstein%20'Du%20Hast'.mp3");
-  	
+
   	new file[128], pName[MAX_PLAYER_NAME]; // Recriamos as mesmas variaveis,só que em publics diferentes.
    	GetPlayerName(playerid, pName, MAX_PLAYER_NAME); // Pegamos o nome da pessoa e guardamos em pName.
    	format(file, sizeof(file), "contas/%s.ini", pName); // Formatamos o caminho para o dini dentro da var file
@@ -256,7 +256,7 @@ public OnPlayerConnect(playerid)
 	} else {
 		ShowPlayerDialog(playerid, 4, DIALOG_STYLE_PASSWORD, "Login", "Por Favor,\nDigite a Sua Senha Abaixo!", "Logar", "Sair"); //mostrará o dialog
 	}
-	
+
 
 
 	new stringini[512];
@@ -270,16 +270,16 @@ public OnPlayerConnect(playerid)
 			acessoriosP[playerid][iValue] = 1;
 		}
 	}
-  	
-  	
-  	
+
+
+
   	// class selection init vars
   	gPlayerCitySelection[playerid] = -1;
 	gPlayerHasCitySelected[playerid] = 0;
 	gPlayerLastCitySelectionTick[playerid] = GetTickCount();
 
 	SetPlayerMapIcon(playerid, 95, 2455.2834,-1461.1854,24.0000, 27, 0, 0);
-	
+
 
 
 
@@ -293,13 +293,13 @@ public OnPlayerConnect(playerid)
 	RemoveBuildingForPlayer(playerid, 1775, 0.0, 0.0, 0.0, 6000.0);
 	RemoveBuildingForPlayer(playerid, 1776, 0.0, 0.0, 0.0, 6000.0);
 	*/
-	
+
 	/*
 	new ClientVersion[32];
 	GetPlayerVersion(playerid, ClientVersion, 32);
 	printf("Player %d reports client version: %s", playerid, ClientVersion);*/
-	
- 	
+
+
 
  	return 1;
 }
@@ -309,13 +309,13 @@ public OnPlayerConnect(playerid)
 public OnPlayerSpawn(playerid)
 {
 	if(IsPlayerNPC(playerid)) return 1;
-	
+
 	new randSpawn = 0;
-	
+
 	TogglePlayerClock(playerid, 0);
 	SetPlayerInterior(playerid,0);
-	
-	
+
+
 
 	if(PLAYER_GREEN == gPlayerCitySelection[playerid]) {
  	    randSpawn = random(sizeof(gRandomSpawns_LosSantos));
@@ -341,12 +341,12 @@ public OnPlayerSpawn(playerid)
    	format(file, sizeof(file), "contas/%s.ini", pName); // Formatamos o caminho para o dini dentro da var file
    	if(!dini_Exists(file)) dini_Create(file);  // Checamos se o arquivo do player existe,se não existir,ele cria.
    	SetPlayerSkin(playerid, dini_Int(file, "Skin")); // Setamos a skin guardada na tag "Skin"
-    
-   	
+
+
 
 
 	//SetPlayerColor(playerid,COLOR_NORMAL_PLAYER);
-	
+
 	/*
 	SetPlayerSkillLevel(playerid,WEAPONSKILL_PISTOL,200);
     SetPlayerSkillLevel(playerid,WEAPONSKILL_PISTOL_SILENCED,200);
@@ -359,7 +359,7 @@ public OnPlayerSpawn(playerid)
     SetPlayerSkillLevel(playerid,WEAPONSKILL_AK47,200);
     SetPlayerSkillLevel(playerid,WEAPONSKILL_M4,200);
     SetPlayerSkillLevel(playerid,WEAPONSKILL_SNIPERRIFLE,200);*/
-    
+
     GivePlayerWeapon(playerid,WEAPON_DEAGLE,99999);
     GivePlayerWeapon(playerid,WEAPON_M4,99999);
     GivePlayerWeapon(playerid,WEAPON_SHOTGUN,99999);
@@ -371,7 +371,7 @@ public OnPlayerSpawn(playerid)
 		Money[playerid] = dini_Int(file, "Money");
 		GivePlayerMoney(playerid,Money[playerid]);
 		GangZoneShowForPlayer(playerid, zone, COLOR_CONTROLDARK);
-		
+
 		Pontuacao[0] = TextDrawCreate(0.833350, 200.888748, "_");
 		TextDrawLetterSize(Pontuacao[0], 0.429165, 9.299992);
 		TextDrawTextSize(Pontuacao[0], 151.000000, 0.000000);
@@ -385,7 +385,7 @@ public OnPlayerSpawn(playerid)
 		TextDrawFont(Pontuacao[0], 1);
 		TextDrawSetProportional(Pontuacao[0], 1);
 		TextDrawSetShadow(Pontuacao[0], 0);
-		
+
 		Pontuacao[1] = TextDrawCreate(40.833351, 201.407363, "Pontuacao");
 		TextDrawLetterSize(Pontuacao[1], 0.400000, 1.600000);
 		TextDrawAlignment(Pontuacao[1], 1);
@@ -433,13 +433,13 @@ public OnPlayerSpawn(playerid)
 		TextDrawFont(Pontuacao[4], 1);
 		TextDrawSetProportional(Pontuacao[4], 1);
 		TextDrawSetShadow(Pontuacao[4], 0);
-		
+
 		new motivo[512];
 		motivo = dini_Get(file, "Motivo_Cadeia");
-		
+
 		cadeia[playerid][0][0] = dini_Int(file, "Tempo_Cadeia");
     	cadeia[playerid][1] = motivo;
-    	
+
     	if(cadeia[playerid][0][0] != 0){
     	    new str[300];
     	    format(str,sizeof(str),"Você Ainda Não Cumpriu a Sua Pena De [%i Segundos] e Pelo Motivo: %s",cadeia[playerid][0][0],cadeia[playerid][1]);
@@ -535,9 +535,9 @@ public OnPlayerDisconnect(playerid,reason)
 	for(new i = 0;i < MAX_ACESSORIOS;i++){
 	    if(acessoriosP[playerid][i] == 1){
 			format(string, sizeof(string), "%sa%i",string,i);
-		} 
+		}
 	}
-	
+
  	new file[128], pName[MAX_PLAYER_NAME]; // Cria duas variaveis para armazenamento.
    	GetPlayerName(playerid, pName, MAX_PLAYER_NAME); // Armazenamos o nome do jogador na pName
    	format(file, sizeof(file), "contas/%s.ini", pName); // Formatamos a var file com o nome do jogador
@@ -551,7 +551,7 @@ public OnPlayerDisconnect(playerid,reason)
  	dini_IntSet(file, "Money", GetPlayerMoney(playerid));
    	dini_IntSet(file, "Tempo_Cadeia", cadeia[playerid][0][0]);
    	dini_Set(file, "Motivo_Cadeia", cadeia[playerid][1]);
-   	
+
     KillTimer(TimerCadeia[playerid]);
 	Bomb[playerid] = 0;
 	check[playerid] = 0;
@@ -566,8 +566,8 @@ public OnPlayerDisconnect(playerid,reason)
 	MaconhaPlant[playerid][0] = 0;
 	MaconhaPlant[playerid][1] = 0;
 	MaconhaPlant[playerid][2] = 0;
-	
-    
+
+
    	return 1; // Retornamos ao jogo que tudo foi executado com sucesso.
 }
 
@@ -595,7 +595,7 @@ CMD:carro(playerid, params[])
  	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
- 	
+
 	if(IsPlayerInAnyVehicle(playerid) == 0) {
 		if(PlayerCar[playerid][0] != 0){
 	        DestroyVehicle(PlayerCar[playerid][0]);
@@ -666,7 +666,7 @@ CMD:usardrogas(playerid,params[])
 	} else {
         return SendClientMessage(playerid, COLOR_RED, "Droga Não Encontrada");
 	}
-    
+
 }
 
 CMD:maconhaplantar(playerid,params[])
@@ -696,7 +696,7 @@ CMD:maconhacolher(playerid,params[])
 {
     new Float:x,Float:y,Float:z;
 	GetObjectPos(MaconhaPlant[playerid][1],x,y,z);
-	
+
 	if(Profissoes[playerid][0] != PRODUTOR_DROGAS) {
 		return SendClientMessage(playerid, COLOR_RED, "Você Não é Produtor de Drogas");
 	}
@@ -738,7 +738,7 @@ CMD:pegarsementes(playerid,params[])
 	if(!IsPlayerInRangeOfPoint(playerid, 5.0,2355.5264,-648.6511,128.0547)) {
 		return SendClientMessage(playerid, COLOR_RED, "Você Não Está No Lugar de Pegar Sementes");
 	}
-	
+
 	MaconhaPlant[playerid][0]++;
     return SendClientMessage(playerid, COLOR_GREEN, "Você Pegou um Semente de Maconha");
 }
@@ -793,7 +793,7 @@ CMD:entrar(playerid,params[])
 			} else {
 				return SendClientMessage(playerid, COLOR_RED, "Está Casa Não É Sua");
 			}
-		} 
+		}
 	}
 	return 1;
 }
@@ -834,7 +834,7 @@ CMD:pegarfundos(playerid,params[])
 			} else {
 				return SendClientMessage(playerid, COLOR_RED, "Está Empresa Não É Sua");
 			}
-		} 
+		}
 	}
 	return 1;
 }
@@ -842,7 +842,7 @@ CMD:pegarfundos(playerid,params[])
 CMD:venderpecas(playerid,params[])
 {
     new carid = GetVehicleTrailer(GetPlayerVehicleID(playerid));
-    
+
     if(Profissoes[playerid][0] != MECANICO){
         return SendClientMessage(playerid, COLOR_RED, "Você Não é um Mecanico");
 	}
@@ -850,19 +850,19 @@ CMD:venderpecas(playerid,params[])
 	if(GetVehicleModel(GetPlayerVehicleID(playerid)) != 525 ){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Está em um Carro Guincho");
 	}
-	
+
 	if(GetVehicleModel(GetVehicleTrailer(GetPlayerVehicleID(playerid))) == 525){
  		return SendClientMessage(playerid, COLOR_RED, "Não é Possivel Vendar Peças dos Guinchos");
 	}
-	
+
 	if(!IsPlayerInRangeOfPoint(playerid, 5.0, 2487.5032,-1519.0341,23.9922)){
  		return SendClientMessage(playerid, COLOR_RED, "Você Não Está No Local de Entrega");
 	}
-	
+
 	if(carid == 0){
  		return SendClientMessage(playerid, COLOR_RED, "Você Não Possuí um Veiculo no Guincho");
 	}
-	
+
  	SetVehicleToRespawn(carid);
  	GivePlayerMoney(playerid,10000);
  	return SendClientMessage(playerid, COLOR_GREEN, "Você Recebeu $10000 Pelas Peças");
@@ -895,7 +895,7 @@ CMD:guinchar(playerid,params[])
         DetachTrailerFromVehicle(GetPlayerVehicleID(playerid));
         return 1;
 	}
-	
+
 }
 
 CMD:perfil(playerid,params[]){
@@ -947,7 +947,7 @@ CMD:setexp(playerid,params[]){
  	format(str,sizeof(str),"%s Foi Setado Para o Exp: %i",name,valor);
  	SendClientMessage(playerid, COLOR_GREEN,str);
     SendClientMessage(id, COLOR_GREEN, str);
-    
+
     if(Exp[id] >= 10){
         Exp[id] = 0;
         Nivel[id]++;
@@ -961,7 +961,7 @@ CMD:localentrega(playerid,params[])
     if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
     if(Profissoes[playerid][0] == MECANICO){
         SetPlayerCheckpoint(playerid,2487.5032,-1519.0341,23.9922, 3.0);
         return SendClientMessage(playerid, COLOR_WHITE, "Local de Entrega Marcado!");
@@ -1020,7 +1020,7 @@ CMD:cadeia(playerid,params[])
 	if(cadeia[id][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Esse Jogador Já Está na Cadeia");
 	}
-	
+
 	if(!IsPlayerConnected(id)){
         return SendClientMessage(playerid, COLOR_RED, "Esse ID Não Está Online");
 	}
@@ -1030,7 +1030,7 @@ CMD:cadeia(playerid,params[])
     SendClientMessage(id, COLOR_RED, str);
     SetPlayerHealth(id, Float:0x7F800000 );
     ResetPlayerWeapons(id);
-    
+
     format(str,sizeof(str),"Tempo: %i Seg",cadeia[id][0]);
     TextCadeia[id][0] = TextDrawCreate(470.249877, 311.333099, str);
 	TextDrawLetterSize(TextCadeia[id][0], 0.400000, 1.600000);
@@ -1054,7 +1054,7 @@ CMD:cadeia(playerid,params[])
 	TextDrawFont(TextCadeia[id][2], 1);
 	TextDrawSetProportional(TextCadeia[id][2], 1);
 	TextDrawSetShadow(TextCadeia[id][2], 0);
-	
+
  	format(str,sizeof(str),"Motivo: %s",cadeia[id][1]);
     TextCadeia[id][3] = TextDrawCreate(470.249877, 353.333099, str);
 	TextDrawLetterSize(TextCadeia[id][3], 0.400000, 1.600000);
@@ -1080,11 +1080,11 @@ CMD:cadeia(playerid,params[])
 	TextDrawFont(TextCadeia[id][1], 1);
 	TextDrawSetProportional(TextCadeia[id][1], 1);
 	TextDrawSetShadow(TextCadeia[id][1], 19);
-	
+
 	for(new i = 0;i < 4;i++){
 		TextDrawShowForPlayer(playerid,TextCadeia[id][i]);
 	}
-	
+
     SetPlayerInterior(id,10);
     SetPlayerPos(id,214.1204,110.8148,998.5909);
     TimerCadeia[id] = SetTimer("CadeiaFunc", 1000, true);
@@ -1098,11 +1098,11 @@ CMD:armaid(playerid, params[]){
 	{
     	return SendClientMessage(playerid, COLOR_RED, "Use: /armaid [id][1 - 46][Quantidade]");
 	}
-	
+
 	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
 	if(IsPlayerConnected(id))
 	{
 		GivePlayerWeapon(id,type,ammo);
@@ -1122,7 +1122,7 @@ CMD:armas(playerid, params[]){
 	{
     	return SendClientMessage(playerid, COLOR_RED, "Use: /armas [1,2,3]");
 	}
-	
+
 	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
@@ -1193,11 +1193,11 @@ CMD:equiparitem(playerid, params[]){
 	    if(flag == 0){
             SendClientMessage(playerid, COLOR_RED, "Sem Slots Disponiveis, /removeritem");
 		}
-	
+
 	} else {
         return SendClientMessage(playerid, COLOR_RED, "Você Não Possui Esse Item");
 	}
-	
+
 	return 1;
 }
 
@@ -1255,7 +1255,7 @@ CMD:tps(playerid, params[]){
 	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
 	new str[128] = "Aeroporto-LS\nHQ Blue\nHQ Green\nPizzaria\nOficina de Blindagem\nPrédio Alto-LS\nEmpresa 0\nProdutor de Drogas";
 	ShowPlayerDialog(playerid, 3, 2, "Teletransporte", str, "Ir", "Cancelar"); //mostrará o dialog
 	return 1;
@@ -1268,12 +1268,12 @@ CMD:empregar(playerid, params[]){
 			format(str, sizeof(str), "ID[%d], Você Realmente Deseja Ser Um \n ENTREGADOR DE PIZZA?", playerid);
 			ShowPlayerDialog(playerid, 2, DIALOG_STYLE_MSGBOX, "Entregador de Pizza", str, "Ok", "Cancelar");
 		}
-		
+
 		if(IsPlayerInRangeOfPoint(playerid, 3.0, 2442.9648,-1550.4795,23.9976)) {
 			format(str, sizeof(str), "ID[%d], Você Realmente Deseja Ser Um \n MECANICO?", playerid);
 			ShowPlayerDialog(playerid, 1, DIALOG_STYLE_MSGBOX, "Mecanico", str, "Ok", "Cancelar");
 		}
-		
+
 		if(IsPlayerInRangeOfPoint(playerid, 3.0,2351.4797,-658.7537,128.0620)) {
 			format(str, sizeof(str), "ID[%d], Você Realmente Deseja Ser Um \n PRODUTOR DE DROAGAS?", playerid);
 			ShowPlayerDialog(playerid, 10, DIALOG_STYLE_MSGBOX, "PRODUTOR DE DROGAS", str, "Ok", "Cancelar");
@@ -1297,7 +1297,7 @@ CMD:kill(playerid, params[]){
 	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
 	SetPlayerHealth(playerid,0);
 	return 1;
 }
@@ -1319,7 +1319,7 @@ CMD:trabalhar(playerid, params[]){
 	                    Profissoes[playerid][1] = 1;
 						SendClientMessage(playerid, COLOR_WHITE ,"Casa Marcada!");
 						SendClientMessage(playerid, COLOR_WHITE ,"Use /trabalhar Novamente Para Parar de Trabalhar");
-						
+
 					} else {
 		                SendClientMessage(playerid, COLOR_RED ,"Você Não Está Usando a Lambreta das Pizzas");
 					}
@@ -1350,7 +1350,7 @@ CMD:homembomba(playerid, params[]){
 	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
 	SendClientMessage(playerid, COLOR_BLUE ,"Use /detonar para se explodir");
 	SetPlayerAttachedObject(playerid, 3, 1654, 3);
 	SetPlayerAttachedObject(playerid, 4, 1654, 4);
@@ -1364,7 +1364,7 @@ CMD:detonar(playerid, params[]){
     if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
 	if(Bomb[playerid] == 1){
 		new Float:x,Float:y,Float:z;
 		GetPlayerPos(playerid, x, y, z);
@@ -1410,7 +1410,7 @@ CMD:jetpack(playerid, params[]){
 	if(cadeia[playerid][0][0] != 0){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
-	
+
 	SetPlayerSpecialAction(playerid,2);
 	return 1;
 }
@@ -1480,7 +1480,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
         }
     }
-    
+
     if(dialogid == 10)//identifica o id do dialog.
     {
         if(response)//Caso ele clique no primeiro botão
@@ -1499,7 +1499,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
         }
     }
-    
+
     if(dialogid == 1)//identifica o id do dialog.
     {
         if(response)//Caso ele clique no primeiro botão
@@ -1561,7 +1561,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		    }
    		}
     }
-    
+
     if(dialogid == 4)//identifica o id do dialog.
     {
 		if(response)//botão 1
@@ -1577,7 +1577,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             Kick(playerid);
 		}
     }
-    
+
     if(dialogid == 5)//identifica o id do dialog.
     {
 		if(response)//botão 1
@@ -1614,10 +1614,10 @@ public VerificarVeiculo(playerid)
             SendClientMessage(playerid, COLOR_GREEN, "Você Não É um Green");
             RemovePlayerFromVehicle(playerid);
             return 1;
-            
+
         }
     }
-    
+
     for(new c = 0; c < 6; c++)
     {
         if(IsPlayerInVehicle(playerid, VBlue[c]) && PlayerInfo[playerid][0] == PLAYER_GREEN)
@@ -1637,7 +1637,7 @@ public VerificarVeiculo(playerid)
             return 1;
         }
     }
-    
+
     for(new c = 0; c < 2; c++)
     {
         if(IsPlayerInVehicle(playerid, VTowCar[c]) && Profissoes[playerid][0] != MECANICO)
@@ -1647,7 +1647,7 @@ public VerificarVeiculo(playerid)
             return 1;
         }
     }
-    
+
     return 1;
 }
 forward CadeiaFunc(playerid);
@@ -1682,24 +1682,24 @@ public Perfil(playerid,id){
 forward VehicleFunc(playerid);
 public VehicleFunc(playerid){
 
-	
+
     new string[128];
     new Float:vX,Float:vY,Float:vZ;
     new veh = GetPlayerVehicleID(playerid);
     new Float:health;
-    
+
     //velocimetro
     GetVehicleVelocity(veh,vX,vY,vZ);
     velocidade[playerid] = floatsqroot((vX*vX) + (vY*vY) + (vZ*vZ)) * 180.13;
 	format(string, sizeof(string), "Velocidade: %.0f KM/H", velocidade[playerid]);
 	TextDrawSetString(TDEditor_TD[playerid][7],string);
-	
+
 	//lataria
     GetVehicleHealth(veh, health);
     health = health / 10;
 	format(string,sizeof(string),"Lataria: %.0f%",health);
 	TextDrawSetString(TDEditor_TD[playerid][5], string);
-	
+
 	//blindagem
     GetVehicleHealth(veh, health);
     if(Blind[veh] > 0 && health < 1000){
@@ -1718,7 +1718,7 @@ public OnPlayerStateChange(playerid, newstate, oldstate) {
     VerificarVeiculo(playerid);
 
     TimerVehicle[playerid] = SetTimer("VehicleFunc", 100, true);
-    
+
     TDEditor_TD[playerid][0] = TextDrawCreate(511.249877, 311.333099, "INFO_VEICULO");
 	TextDrawLetterSize(TDEditor_TD[playerid][0], 0.400000, 1.600000);
 	TextDrawAlignment(TDEditor_TD[playerid][0], 1);
@@ -1811,7 +1811,7 @@ public OnPlayerStateChange(playerid, newstate, oldstate) {
 	TextDrawFont(TDEditor_TD[playerid][6], 1);
 	TextDrawSetProportional(TDEditor_TD[playerid][6], 1);
 	TextDrawSetShadow(TDEditor_TD[playerid][6], 0);
-	
+
 	TDEditor_TD[playerid][7] = TextDrawCreate(463.333374, 397.407470, "Velocidade: 0KM/H");
 	TextDrawLetterSize(TDEditor_TD[playerid][7], 0.400000, 1.600000);
 	TextDrawAlignment(TDEditor_TD[playerid][7], 1);
@@ -1823,13 +1823,13 @@ public OnPlayerStateChange(playerid, newstate, oldstate) {
 	TextDrawSetProportional(TDEditor_TD[playerid][7], 1);
 	TextDrawSetShadow(TDEditor_TD[playerid][7], 0);
 
-	
+
 
 	new i;
 	for(i = 0;i <= 8;i++){
 		TextDrawShowForPlayer(playerid, TDEditor_TD[playerid][i]);
 	}
-	
+
   } if(oldstate == PLAYER_STATE_DRIVER && newstate == PLAYER_STATE_ONFOOT){
 	  	new j;
 		for(j = 0;j < 8;j++){
@@ -1859,7 +1859,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 		format(string, sizeof(string), "Blue: %d", PBlue);
 		TextDrawSetString(Pontuacao[3], string);
 	}
-	
+
 	if(PlayerInfo[playerid][0] == PLAYER_BLUE && PlayerInfo[killerid][0] == PLAYER_GREEN){
 		PGreen++;
 		Money[killerid] = Money[killerid] + 5000;
@@ -1867,11 +1867,11 @@ public OnPlayerDeath(playerid, killerid, reason)
 		format(string, sizeof(string), "Green: %d", PGreen);
 		TextDrawSetString(Pontuacao[2], string);
 	}
-    
+
     // if they ever return to class selection make them city
 	// select again first
 	gPlayerHasCitySelected[playerid] = 0;
-    
+
 
    	return 1;
 }
@@ -1897,7 +1897,7 @@ ClassSel_SetupCharSelection(playerid)
 		SetPlayerCameraLookAt(playerid,-2673.8381,1399.7424,918.3516);
 	}
 
-	
+
 }
 
 //----------------------------------------------------------
@@ -1945,12 +1945,12 @@ ClassSel_SetupSelectedCity(playerid)
 	if(gPlayerCitySelection[playerid] == -1) {
 		gPlayerCitySelection[playerid] = PLAYER_GREEN;
 	}
-	
+
 	if(gPlayerCitySelection[playerid] == PLAYER_GREEN) {
 		SetPlayerInterior(playerid,0);
    		SetPlayerCameraPos(playerid,1630.6136,-2286.0298,110.0);
 		SetPlayerCameraLookAt(playerid,1887.6034,-1682.1442,47.6167);
-		
+
 		TextDrawShowForPlayer(playerid,txtGreen);
 		TextDrawHideForPlayer(playerid,txtBlue);
 	}
@@ -1958,7 +1958,7 @@ ClassSel_SetupSelectedCity(playerid)
 		SetPlayerInterior(playerid,0);
    		SetPlayerCameraPos(playerid,-1300.8754,68.0546,129.4823);
 		SetPlayerCameraLookAt(playerid,-1817.9412,769.3878,132.6589);
-		
+
 		TextDrawHideForPlayer(playerid,txtGreen);
 		TextDrawShowForPlayer(playerid,txtBlue);
 	}
@@ -1996,7 +1996,7 @@ ClassSel_HandleCitySelection(playerid)
 {
 	new Keys,ud,lr;
     GetPlayerKeys(playerid,Keys,ud,lr);
-    
+
     if(gPlayerCitySelection[playerid] == -1) {
 		ClassSel_SwitchToNextCity(playerid);
 		return;
@@ -2004,7 +2004,7 @@ ClassSel_HandleCitySelection(playerid)
 
 	// only allow new selection every ~100 ms
 	if( (GetTickCount() - gPlayerLastCitySelectionTick[playerid]) < 100 ) return;
-	
+
 	if(Keys & KEY_FIRE) {
 	    gPlayerHasCitySelected[playerid] = 1;
 	    TextDrawHideForPlayer(playerid,txtClassSelHelper);
@@ -2013,7 +2013,7 @@ ClassSel_HandleCitySelection(playerid)
 	    TogglePlayerSpectating(playerid,0);
 	    return;
 	}
-	
+
 	if(lr > 0) {
 	   ClassSel_SwitchToNextCity(playerid);
 	}
@@ -2039,7 +2039,7 @@ public OnPlayerRequestClass(playerid, classid)
       		SetSpawnInfo(playerid, 0, 0, 240.1, 110.0, 200.0, 0.0, 0, 0, 0, 0, 0, 0);
 		}
   	}
-    
+
 	return 1;
 }
 
@@ -2062,16 +2062,16 @@ public OnGameModeInit()
 	//UsePlayerPedAnims();
 	//ManualVehicleEngineAndLights();
 	//LimitGlobalChatRadius(300.0);
-	
+
 	new file[128],str[512];
-	
+
 	format(file, sizeof(file), "casas/casas.ini"); // Formatamos o caminho para o dini dentro da var file
 	for(new i = 0;i < MAX_HOUSE;i++){
 	    format(str,sizeof(str),"Casa_%i",i);
    		Casa[i] = dini_Get(file, str);
 	}
-   	
-   	
+
+
    	format(file, sizeof(file), "empresas/empresas.ini"); // Formatamos o caminho para o dini dentro da var file
 	for(new i = 0;i < MAX_COMPANY;i++){
 	    format(str,sizeof(str),"Empresa_%i_Dono",i);
@@ -2079,24 +2079,24 @@ public OnGameModeInit()
         format(str,sizeof(str),"Empresa_%i_Fundos",i);
 		Empresa[i][1][0] = dini_Int(file, str);
 	}
-	
+
 	//empresaposicao
 	EmpresaPos[0] = {1043.7058,1011.9776,11.0000};
-	
+
 	//casaposicao
 	CasaPos[0] = {2062.8569,-1820.7913,13.5469};
-	
+
  	zone = GangZoneCreate(1976.4213,-1351.4966, 1862.1624,-1451.2772);
- 	
+
  	AddStaticPickup(3096, 1, 2455.2834,-1461.1854,24.0000, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Blindagem\n/blindar Para Blindar", COLOR_ORANGE, 2455.2834,-1461.1854,24.0000, 15.0, 0);
-	
+
 	AddStaticPickup(2060, 1, 2355.5264,-648.6511,128.0547, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Semente De Maconha\n/pegarsementes Para Pegar Sementes", COLOR_ORANGE, 2355.5264,-648.6511,128.0547, 15.0, 0);
-	
+
 	AddStaticPickup(1239, 1, 2351.4797,-658.7537,128.0620, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Produtor de Drogas\n/empregar Para Ser Um Produtor de Drogas", COLOR_ORANGE,2351.4797,-658.7537,128.0620, 15.0, 0);
-	
+
 
 	AddStaticPickup(1582, 1, 2116.9954,-1788.4574,13.5547, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Pizzas\n/trabalhar para pegar as pizzas", COLOR_ORANGE, 2116.9954,-1788.4574,13.5547, 15.0, 0);
@@ -2113,17 +2113,17 @@ public OnGameModeInit()
 	format(str,sizeof(str),"{43BBDE}\n{FF7F00}Casa: 0\nDono: %s\n/entrar Para Entrar Na Casa",Casa[0]);
  	AddStaticPickup(1272, 1,2062.8569,-1820.7913,13.5469, 0);
 	Create3DTextLabel(str, COLOR_ORANGE, 2062.8569,-1820.7913,13.5469, 15.0, 0);
-	
+
 	AddStaticPickup(1239, 1,2442.9648,-1550.4795,23.9976, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Saida\n/entrar Para Sair da Casa", COLOR_ORANGE, 2496.049804,-1695.238159,1014.742187, 15.0, 0);
-	
+
 	format(str,sizeof(str),"{43BBDE}\n{FF7F00}Empresa: 0\nDono: %s\nFundos: $%i",Empresa[0][0],Empresa[0][1]);
  	AddStaticPickup(1273, 1,1043.7058,1011.9776,11.0000, 0);
 	EmpresaTxt[0] = Create3DTextLabel(str, COLOR_ORANGE, 1043.7058,1011.9776,11.0000, 15.0, 0);
-    
-	
-	
-	
+
+
+
+
 	//car green
 	VGreen[0] = CreateVehicle(560, 1841.7278,-1361.8839,13.5625,359.2195, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 0
 	VGreen[1] = CreateVehicle(560, 1841.6176,-1393.9387,13.5625,0.1596, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 1
@@ -2131,15 +2131,15 @@ public OnGameModeInit()
 	VGreen[3] = CreateVehicle(560, 1857.0681,-1412.5815,13.5625,0.1596, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 3
 	VGreen[4] = CreateVehicle(560, 1856.8329,-1387.7483,13.3906,0.1596, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 4
 	VGreen[5] = CreateVehicle(447, 1825.9741,-1372.9065,14.4219,268.6653, COLOR_GREEN, COLOR_BLACK, -1); //Veiculo numero 5
-	
+
 	for(new i = 0;i < 5;i++){
 		format(str,sizeof(str),"GREEN-%i",VGreen[i]);
 		SetVehicleNumberPlate(VGreen[i], str);
 	}
-	
-	
-	
-	
+
+
+
+
 	//car blue
 	VBlue[0] = CreateVehicle(560, 1981.9463,-1443.1526,13.5669,180.2304, COLOR_BLUE, COLOR_BLACK , -1); //Veiculo numero 0
 	VBlue[1] = CreateVehicle(560, 1981.7795,-1432.0066,15.0192,1.1704, COLOR_BLUE, COLOR_BLACK , -1); //Veiculo numero 1
@@ -2147,38 +2147,38 @@ public OnGameModeInit()
 	VBlue[3] = CreateVehicle(560, 1992.2061,-1446.2509,13.5647,181.1704,COLOR_BLUE, COLOR_BLACK , -1); //Veiculo numero 3
 	VBlue[4] = CreateVehicle(560, 1991.9059,-1416.8298,17.6119,181.1704, COLOR_BLUE, COLOR_BLACK , -1); //Veiculo numero 4
 	VBlue[5] = CreateVehicle(447, 2002.5551,-1445.0525,13.5616,139.1833, COLOR_BLUE, COLOR_BLACK , -1); //Veiculo numero 5
-	
+
 	for(new i = 0;i < 5;i++){
 		format(str,sizeof(str),"BLUE-%i",VBlue[i]);
 		SetVehicleNumberPlate(VBlue[i], str);
 	}
-	
+
 	new objectidL[5];
  	new objectidM[5];
-	
+
 	for(new k = 0;k < 5;k++){
         objectidL[k] = CreateObject(19419, 1981.9463,-1443.1526,13.5669, 0.0,0.0,0.0,0.0);
 		AttachObjectToVehicle(objectidL[k], VGreen[k], 0.0, 0.0, 0.8, 0.0, 0.0, 0.0);
 	}
-	
+
 	for(new k = 0;k < 5;k++){
         objectidM[k] = CreateObject(19419, 1981.9463,-1443.1526,13.5669, 0.0,0.0,0.0,0.0);
 		AttachObjectToVehicle(objectidM[k], VBlue[k], 0.0, 0.0, 0.8, 0.0, 0.0, 0.0);
 	}
-	
+
 	//pizza bikes
 	VPizza[0] = CreateVehicle(448, 2095.3394,-1816.4541,13.3828,271.3947, -1, -1 , -1); //Veiculo numero 0
 	VPizza[1] = CreateVehicle(448, 2095.2988,-1814.0470,13.3828,271.3947, -1,-1, -1); //Veiculo numero 1
-	
+
 	for(new i = 0;i < 2;i++){
 		format(str,sizeof(str),"PIZZA-%i",VPizza[i]);
 		SetVehicleNumberPlate(VPizza[i], str);
 	}
-	
+
 	//pizza bikes
 	VTowCar[0] = CreateVehicle(525,2446.3567,-1556.3132,23.8738,0.1234, -1, -1 , -1); //Veiculo numero 0
 	VTowCar[1] = CreateVehicle(525,2456.3567,-1556.3132,23.8738,0.1234, -1,-1, -1); //Veiculo numero 1
-	
+
 	for(new i = 0;i < 2;i++){
 		format(str,sizeof(str),"MEC-%i",VTowCar[i]);
 		SetVehicleNumberPlate(VTowCar[i], str);
@@ -2186,9 +2186,9 @@ public OnGameModeInit()
 
 	SetTimer("TimeP", 1000, true);
 	SetTimer("TimerClock", 1000, true);
-    
 
-	
+
+
 	ClassSel_InitTextDraws();
 
 	// Player Class
@@ -2232,7 +2232,7 @@ public OnGameModeInit()
 	AddPlayerClass(208,1759.0189,-1898.1260,13.5622,266.4503,-1,-1,-1,-1,-1,-1);
 	AddPlayerClass(273,1759.0189,-1898.1260,13.5622,266.4503,-1,-1,-1,-1,-1,-1);
 	AddPlayerClass(289,1759.0189,-1898.1260,13.5622,266.4503,-1,-1,-1,-1,-1,-1);
-	
+
 	AddPlayerClass(47,1759.0189,-1898.1260,13.5622,266.4503,-1,-1,-1,-1,-1,-1);
 	AddPlayerClass(48,1759.0189,-1898.1260,13.5622,266.4503,-1,-1,-1,-1,-1,-1);
 	AddPlayerClass(49,1759.0189,-1898.1260,13.5622,266.4503,-1,-1,-1,-1,-1,-1);
@@ -2281,18 +2281,18 @@ public OnGameModeInit()
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lv_law.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lv_airport.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/lv_gen.txt");
-    
+
     // SAN FIERRO
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/sf_law.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/sf_airport.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/sf_gen.txt");
-    
+
     // LOS SANTOS
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/ls_law.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/ls_airport.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/ls_gen_inner.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/ls_gen_outer.txt");
-    
+
     // OTHER AREAS
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/whetstone.txt");
     total_vehicles_from_files += LoadStaticVehiclesFromFile("vehicles/bone.txt");
@@ -2308,7 +2308,7 @@ public OnGameModeInit()
 public OnGameModeExit()
 {
 	new file[128],str[512];
-	
+
 	format(file, sizeof(file), "casas/casas.ini"); // Formatamos o caminho para o dini dentro da var file
 	for(new i = 0;i < MAX_HOUSE;i++){
 	    format(str,sizeof(str),"Casa_%i",i);
@@ -2339,7 +2339,7 @@ public TimeP(){
 	if(PBlue == PGreen){
         GangZoneShowForAll(zone, COLOR_CONTROLDARK);
 	}
-		
+
 	if(Tempo == (TEMPO_PARTIDA/2)){
         SendClientMessageToAll(COLOR_PURPLE, "Uma Arma Especial Foi Spawnada No Meio do Território!");
         new value = random(3);
@@ -2370,7 +2370,7 @@ public TimeP(){
 	TextDrawSetString(Pontuacao[3], string);
 	format(string, sizeof(string), "Green: %d", PGreen);
 	TextDrawSetString(Pontuacao[2], string);
-	
+
 }
 
 forward TimerClock();
@@ -2478,13 +2478,13 @@ public OnPlayerUpdate(playerid)
 	    ClassSel_HandleCitySelection(playerid);
 	    return 1;
 	}
-	
+
 	// No weapons in interiors
 	//if(GetPlayerInterior(playerid) != 0 && GetPlayerWeapon(playerid) != 0) {
 	    //SetPlayerArmedWeapon(playerid,0); // fists
 	    //return 0; // no syncing until they change their weapon
 	//}
-	
+
 	/* No jetpacks allowed
 	if(GetPlayerSpecialAction(playerid) == SPECIAL_ACTION_USEJETPACK) {
 	    Kick(playerid);
@@ -2510,3 +2510,4 @@ public OnPlayerUpdate(playerid)
 
 
 //----------------------------------------------------------
+
