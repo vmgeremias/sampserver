@@ -16,7 +16,7 @@
 
 
 #pragma tabsize 0
-
+//x
 
 //----------------------------------------------------------
 //COLORS
@@ -42,7 +42,6 @@
 #define MAX_ACESSORIOS 3
 #define ENTREGADOR_PIZZA 1
 #define MECANICO 2
-#define PRODUTOR_DROGAS 3
 #define DialogInputEx 2
 #define DialogBoxEx 1
 #define MaxBlind 100
@@ -93,9 +92,6 @@
 #define Parachute 46
 //-------
 
-//PROPERTY
-#define MAX_HOUSE 1
-#define MAX_COMPANY 1
 
 //----------------------------------------------------------
 
@@ -140,7 +136,7 @@ new VehicleColoursTableRGBA[256] = {
 
 
 new Float:PlayerInfo[MAX_PLAYERS][1];
-new Float:Profissoes[MAX_PLAYERS][3];
+new Float:Profissoes[MAX_PLAYERS][2];
 new PlayerCar[MAX_PLAYERS][1];
 
 new zone;
@@ -153,14 +149,11 @@ new Float:velocidade[MAX_PLAYERS];
 
 new TimerVehicle[MAX_PLAYERS];
 new TimerCadeia[MAX_PLAYERS];
-new EmpresaTxt[MAX_HOUSE];
 
 new Tempo = TEMPO_PARTIDA;
 new cadeia[MAX_PLAYERS][2][512];
 new Nivel[MAX_PLAYERS];
 new Exp[MAX_PLAYERS];
-new MaconhaPlant[MAX_PLAYERS][4];
-new Maconha[MAX_PLAYERS];
 
 new pizza[MAX_PLAYERS];
 new Text:txtClassSelHelper;
@@ -174,9 +167,7 @@ new Text:Pontuacao[5];
 new Text:TextCadeia[MAX_PLAYERS][4];
 new PBlue;
 new PGreen;
-
-new ProcurarArrow[MAX_PLAYERS][2];
-
+new Casa[100][512];
 
 #define MINIGUNMODEL 362
 #define FLAMETHMODEL 361
@@ -209,15 +200,6 @@ new veehName[][] ={"Landstalker","Bravura","Buffalo","Linerunner","Pereniel","Se
 "Stair Trailer","Boxville","Farm Plow","Utility Trailer"
 };
 
-new Casa[MAX_HOUSE][512];
-//CasaPos
-new Float:CasaPos[MAX_HOUSE][3];
-
-new Empresa[MAX_COMPANY][2][512];
-//EmpresasPos
-new Float:EmpresaPos[MAX_COMPANY][3];
-
-
 
 
 //new thisanimid=0;
@@ -248,8 +230,6 @@ public OnPlayerConnect(playerid)
     Profissoes[playerid][0] = dini_Int(file, "Profissoes");
     Nivel[playerid] = dini_Int(file, "Nivel");
     Money[playerid]= dini_Int(file, "Money");
-    Maconha[playerid]= dini_Int(file, "Maconha");
-    MaconhaPlant[playerid][0]= dini_Int(file, "SementeMaconha");
     Exp[playerid] = dini_Int(file, "Exp");
    	if(!dini_Exists(file)){
         ShowPlayerDialog(playerid, 5, DIALOG_STYLE_PASSWORD, "Criar Conta", "Seja Bem Vindo,\n Digite a Sua Senha Para Registrar", "Registrar", "Sair");
@@ -546,8 +526,6 @@ public OnPlayerDisconnect(playerid,reason)
    	dini_Set(file, "Itens", string);
    	dini_IntSet(file, "Nivel", Nivel[playerid]);
  	dini_IntSet(file, "Exp", Exp[playerid]);
- 	dini_IntSet(file, "Maconha", Maconha[playerid]);
- 	dini_IntSet(file, "SementeMaconha", MaconhaPlant[playerid][0]);
  	dini_IntSet(file, "Money", GetPlayerMoney(playerid));
    	dini_IntSet(file, "Tempo_Cadeia", cadeia[playerid][0][0]);
    	dini_Set(file, "Motivo_Cadeia", cadeia[playerid][1]);
@@ -560,13 +538,6 @@ public OnPlayerDisconnect(playerid,reason)
 	cadeia[playerid][0][0] = 0;
 	cadeia[playerid][1] = "";
 	Money[playerid] = 0;
-	Maconha[playerid] = 0;
-	DestroyObject(MaconhaPlant[playerid][1]);
-	Delete3DTextLabel(MaconhaPlant[playerid][3]);
-	MaconhaPlant[playerid][0] = 0;
-	MaconhaPlant[playerid][1] = 0;
-	MaconhaPlant[playerid][2] = 0;
-	
     
    	return 1; // Retornamos ao jogo que tudo foi executado com sucesso.
 }
@@ -634,166 +605,22 @@ CMD:colour(playerid,params[])
     return 1;
 }
 
-CMD:dejavu(playerid,params[])
-{
-   if(!IsPlayerInAnyVehicle(playerid)){
-		return SendClientMessage(playerid, COLOR_RED, "Você Não Está Em Um Veiculo");
-   }
-   	new Float:rot;
-    GetPlayerFacingAngle(playerid,rot);
-	SetVehicleAngularVelocity(GetPlayerVehicleID(playerid), 0, 0.0, 10);
-	SetVehicleVelocity(GetPlayerVehicleID(playerid), 0.0, 0.0, 10);
-   	return SendClientMessage(playerid, COLOR_GREEN, "DEJA VU!!!!!");
-}
-
-CMD:usardrogas(playerid,params[])
-{
-    new txt[128],Float:colete;
-    if(sscanf(params,"s[128]",txt))
-    {
-        return SendClientMessage(playerid, COLOR_RED, "Use: /usardrogas [DROGA]");
-    }
-	if(strcmp(txt, "maconha") == 0){
-		if(Maconha[playerid] > 0) {
-		    GetPlayerArmour(playerid,colete);
-			Maconha[playerid]--;
-			SetPlayerDrunkLevel(playerid,4000);
-			SetPlayerArmour(playerid,colete + 2);
-			return SendClientMessage(playerid, COLOR_GREEN, "Você Está Chapado");
-		} else {
-            return SendClientMessage(playerid, COLOR_RED, "Você Não Possui Está Droga");
-		}
-	} else {
-        return SendClientMessage(playerid, COLOR_RED, "Droga Não Encontrada");
-	}
-    
-}
-
-CMD:maconhaplantar(playerid,params[])
-{
-	if(Profissoes[playerid][0] != PRODUTOR_DROGAS) {
-		return SendClientMessage(playerid, COLOR_RED, "Você Não é Produtor de Drogas");
-	}
-	if(MaconhaPlant[playerid][0] <= 0) {
-        return SendClientMessage(playerid, COLOR_RED, "Você Não Possui Sementes de Maconha");
-	}
-	if(MaconhaPlant[playerid][1] != 0) {
-        return SendClientMessage(playerid, COLOR_RED, "Você Já Possui Maconha Plantada");
-	}
-	ApplyAnimation(playerid, "BOMBER", "BOM_Plant_Crouch_In", 4.1, 0, 1, 1, 1, 1, 1);
-	new Float:x,Float:y,Float:z,str[128],name[128];
-	GetPlayerName(playerid, name, MAX_PLAYER_NAME);\
-	format(str,sizeof(str),"Planta de Maconha\nDono: %s",name);
-	GetPlayerPos(playerid,x,y,z);
- 	MaconhaPlant[playerid][0]--;
-	MaconhaPlant[playerid][1] = CreateObject(2203, x, y, z-0.75, 0.0, 0.0, 96.0);
-	MaconhaPlant[playerid][2] = 1;
-	MaconhaPlant[playerid][3] = Create3DTextLabel(str, COLOR_GREEN, x, y, z, 40.0, 0, 0);
-    return SendClientMessage(playerid, COLOR_GREEN, "Maconha Plantada");
-}
-
-CMD:maconhacolher(playerid,params[])
-{
-    new Float:x,Float:y,Float:z;
-	GetObjectPos(MaconhaPlant[playerid][1],x,y,z);
-	
-	if(Profissoes[playerid][0] != PRODUTOR_DROGAS) {
-		return SendClientMessage(playerid, COLOR_RED, "Você Não é Produtor de Drogas");
-	}
-	if(!IsPlayerInRangeOfPoint(playerid, 5.0,x,y,z)) {
-		return SendClientMessage(playerid, COLOR_RED, "Não Existem Plantas Suas Por Perto");
-	}
-	if(MaconhaPlant[playerid][2] < 100) {
-        return SendClientMessage(playerid, COLOR_RED, "A Maconha Não Está Pronto");
-	}
-	ApplyAnimation(playerid, "BOMBER", "BOM_Plant_Crouch_In", 4.1, 0, 1, 1, 1, 1, 1);
-	DestroyObject(MaconhaPlant[playerid][1]);
-	Delete3DTextLabel(MaconhaPlant[playerid][3]);
-    Maconha[playerid] = Maconha[playerid] + 100;
-    MaconhaPlant[playerid][1] = 0;
-    MaconhaPlant[playerid][2] = 0;
-    return SendClientMessage(playerid, COLOR_GREEN, "Você Colheu 100g de Maconha");
-}
-
-CMD:maconhalocalizar(playerid,params[])
-{
-    new Float:x,Float:y,Float:z;
-	GetObjectPos(MaconhaPlant[playerid][1],x,y,z);
-	if(GetObjectPos(MaconhaPlant[playerid][1],x,y,z) == 1){
-	    SetPlayerCheckpoint(playerid,x,y,z, 3.0);
-	    return SendClientMessage(playerid, COLOR_GREEN, "Maconha Marcada");
-	} else {
-        return SendClientMessage(playerid, COLOR_RED, "Você Não Possui Uma Planta de Maconha");
-	}
-}
-
-CMD:pegarsementes(playerid,params[])
-{
-    new Float:x,Float:y,Float:z;
-	GetObjectPos(MaconhaPlant[playerid][1],x,y,z);
-
-	if(Profissoes[playerid][0] != PRODUTOR_DROGAS) {
-		return SendClientMessage(playerid, COLOR_RED, "Você Não é Produtor de Drogas");
-	}
-	if(!IsPlayerInRangeOfPoint(playerid, 5.0,2355.5264,-648.6511,128.0547)) {
-		return SendClientMessage(playerid, COLOR_RED, "Você Não Está No Lugar de Pegar Sementes");
-	}
-	
-	MaconhaPlant[playerid][0]++;
-    return SendClientMessage(playerid, COLOR_GREEN, "Você Pegou um Semente de Maconha");
-}
-
-
-
-
-
-CMD:procurar(playerid,params[])
-{
-	KillTimer(ProcurarArrow[playerid][1]);
-	RemovePlayerMapIcon(playerid, 51);
-	DestroyPlayerObject(playerid, ProcurarArrow[playerid][0]);
-    new id,Float:x,Float:y,Float:z;
-    if(sscanf(params,"i",id))
-    {
-        return SendClientMessage(playerid, COLOR_RED, "Use: /procurar [ID]");
-    }
-    if(!IsPlayerConnected(id)){
-        return SendClientMessage(playerid, COLOR_RED, "O ID Não Está Online");
-	}
-	GetPlayerPos(id,x,y,z);
-	ProcurarArrow[playerid][0] = CreatePlayerObject(playerid, 19605, x, y, z+1, 0, 0, 96, 300.0);
-	SetPlayerMapIcon(playerid, 51,x,y,z, 0, COLOR_RED,1);
-    ProcurarArrow[playerid][1] = SetTimerEx("Procurar", 100, true, "ii",playerid,id);
-    return 1;
-}
-
-CMD:procuraroff(playerid,params[])
-{
-	KillTimer(ProcurarArrow[playerid][1]);
-	RemovePlayerMapIcon(playerid, 51);
-	DestroyPlayerObject(playerid, ProcurarArrow[playerid][0]);
-    return SendClientMessage(playerid, COLOR_GREEN, "Marcador Retirado");
-}
-
-CMD:payday(playerid,params[])
-{
-   Payday();
-   return 1;
-}
-
 CMD:entrar(playerid,params[])
 {
-	for(new i = 0; i < MAX_HOUSE;i++){
-	    if(IsPlayerInRangeOfPoint(playerid, 5.0,CasaPos[i][0],CasaPos[i][1],CasaPos[i][2])){
-	        new pName[MAX_PLAYER_NAME];
-	   		GetPlayerName(playerid, pName, MAX_PLAYER_NAME);
-			if(!strcmp(Casa[0], pName)){
-	            SetPlayerInterior(playerid,3);
-				SetPlayerPos(playerid,2496.049804,-1695.238159,1014.742187);
-			} else {
-				return SendClientMessage(playerid, COLOR_RED, "Está Casa Não É Sua");
-			}
-		} 
+    if(IsPlayerInRangeOfPoint(playerid, 5.0,2062.8569,-1820.7913,13.5469)){
+        new pName[MAX_PLAYER_NAME];
+   		GetPlayerName(playerid, pName, MAX_PLAYER_NAME);
+		if(!strcmp(Casa[0], pName)){
+            SetPlayerInterior(playerid,3);
+			SetPlayerPos(playerid,2496.049804,-1695.238159,1014.742187);
+		} else {
+			return SendClientMessage(playerid, COLOR_RED, "Está Casa Não É Sua");
+		}
+	}
+	
+	if(IsPlayerInRangeOfPoint(playerid, 5.0,2496.049804,-1695.238159,1014.742187)){
+ 		SetPlayerInterior(playerid,0);
+		SetPlayerPos(playerid,2062.8569,-1820.7913,13.5469);
 	}
 	return 1;
 }
@@ -801,7 +628,7 @@ CMD:entrar(playerid,params[])
 CMD:darponto(playerid,params[])
 {
 	new type,qnt;
-    if(sscanf(params,"ii",type,qnt) || (type != 0 && type != 1))
+    if(sscanf(params,"ii",type,qnt) && (type != 0 || type != 1) && qnt != 0)
     {
         return SendClientMessage(playerid, COLOR_RED, "Use: /darponto [0-Blue ou 1-Green] [Quantidade]");
     }
@@ -813,30 +640,6 @@ CMD:darponto(playerid,params[])
         SendClientMessage(playerid, COLOR_GREEN, "Pontos Dados");
 	}
     return 1;
-}
-
-CMD:pegarfundos(playerid,params[])
-{
-	for(new i = 0; i < MAX_COMPANY;i++){
-	    if(IsPlayerInRangeOfPoint(playerid, 5.0,EmpresaPos[i][0],EmpresaPos[i][1],EmpresaPos[i][2])){
-	        new pName[MAX_PLAYER_NAME],str[512];
-	   		GetPlayerName(playerid, pName, MAX_PLAYER_NAME);
-			if(!strcmp(Empresa[0][0], pName)){
-				if(Empresa[0][1][0] == 0){
-	                return SendClientMessage(playerid, COLOR_RED, "Está Empresa Não Tem Fundos");
-				} else {
-	                GivePlayerMoney(playerid,Empresa[i][1][0]);
-					Empresa[0][1][0] = 0;
-					format(str,sizeof(str),"{43BBDE}\n{FF7F00}Empresa: 0\nDono: %s\nFundos: $%i",Empresa[i][0],Empresa[i][1]);
-					Update3DTextLabelText(EmpresaTxt[0], COLOR_ORANGE, str);
-					return SendClientMessage(playerid, COLOR_GREEN, "Você Pegou Os Fundos");
-				}
-			} else {
-				return SendClientMessage(playerid, COLOR_RED, "Está Empresa Não É Sua");
-			}
-		} 
-	}
-	return 1;
 }
 
 CMD:venderpecas(playerid,params[])
@@ -899,20 +702,29 @@ CMD:guinchar(playerid,params[])
 }
 
 CMD:perfil(playerid,params[]){
-	Perfil(playerid,playerid);
-	return 1;
+	new str[300],name[300];
+    GetPlayerName(playerid, name, MAX_PLAYER_NAME);
+ 	format(str,sizeof(str),"Perfil de %s:",name);
+ 	SendClientMessage(playerid, COLOR_AQUAMARINE,str);
+	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Money: $%i",Nivel[playerid],Exp[playerid],GetPlayerMoney(playerid));
+    SendClientMessage(playerid, COLOR_AQUAMARINE, str);
+    return 1;
 }
 
 CMD:verperfil(playerid,params[]){
-	new id;
-
+	new str[300],id,name[300];
+	
 	if(sscanf(params,"i",id)){
         return SendClientMessage(playerid, COLOR_RED, "Use: /verperfil [ID]");
 	}
 	if(!IsPlayerConnected(id)){
         return SendClientMessage(playerid, COLOR_RED, "O ID Não Está Online");
 	}
-	Perfil(playerid,id);
+	GetPlayerName(id, name, MAX_PLAYER_NAME);
+ 	format(str,sizeof(str),"Perfil de %s:",name);
+ 	SendClientMessage(playerid, COLOR_AQUAMARINE,str);
+	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Money: $%i",Nivel[id],Exp[id],GetPlayerMoney(id));
+    SendClientMessage(playerid, COLOR_AQUAMARINE, str);
     return 1;
 }
 
@@ -1256,7 +1068,7 @@ CMD:tps(playerid, params[]){
         return SendClientMessage(playerid, COLOR_RED, "Você Não Pode Usar Esse Comando Na Cadeia");
 	}
 	
-	new str[128] = "Aeroporto-LS\nHQ Blue\nHQ Green\nPizzaria\nOficina de Blindagem\nPrédio Alto-LS\nEmpresa 0\nProdutor de Drogas";
+	new str[128] = "Aeroporto-LS\nHQ Blue\nHQ Green\nPizzaria\nOficina de Blindagem\nPrédio Alto-LS";
 	ShowPlayerDialog(playerid, 3, 2, "Teletransporte", str, "Ir", "Cancelar"); //mostrará o dialog
 	return 1;
 }
@@ -1265,21 +1077,16 @@ CMD:empregar(playerid, params[]){
  	if(Profissoes[playerid][0] == 0) {
  	    new str[512];
         if(IsPlayerInRangeOfPoint(playerid, 3.0, 2096.8438,-1806.5330,13.5529)) {
-			format(str, sizeof(str), "ID[%d], Você Realmente Deseja Ser Um \n ENTREGADOR DE PIZZA?", playerid);
+			format(str, sizeof(str), "ID[%d], você realmente deseja ser um \n ENTREGADOR DE PIZZA?", playerid);
 			ShowPlayerDialog(playerid, 2, DIALOG_STYLE_MSGBOX, "Entregador de Pizza", str, "Ok", "Cancelar");
 		}
 		
 		if(IsPlayerInRangeOfPoint(playerid, 3.0, 2442.9648,-1550.4795,23.9976)) {
-			format(str, sizeof(str), "ID[%d], Você Realmente Deseja Ser Um \n MECANICO?", playerid);
+			format(str, sizeof(str), "ID[%d], você realmente deseja ser um \n MECANICO?", playerid);
 			ShowPlayerDialog(playerid, 1, DIALOG_STYLE_MSGBOX, "Mecanico", str, "Ok", "Cancelar");
 		}
-		
-		if(IsPlayerInRangeOfPoint(playerid, 3.0,2351.4797,-658.7537,128.0620)) {
-			format(str, sizeof(str), "ID[%d], Você Realmente Deseja Ser Um \n PRODUTOR DE DROAGAS?", playerid);
-			ShowPlayerDialog(playerid, 10, DIALOG_STYLE_MSGBOX, "PRODUTOR DE DROGAS", str, "Ok", "Cancelar");
-		}
 	} else {
-        SendClientMessage(playerid,COLOR_RED ,"Você Ja Possui Um Emprego, /sairemprego");
+        SendClientMessage(playerid,COLOR_RED ,"Voce Ja Possui Um Emprego, /sairemprego");
 	}
 	return 1;
 }
@@ -1352,10 +1159,10 @@ CMD:homembomba(playerid, params[]){
 	}
 	
 	SendClientMessage(playerid, COLOR_BLUE ,"Use /detonar para se explodir");
-	SetPlayerAttachedObject(playerid, 3, 1654, 3);
-	SetPlayerAttachedObject(playerid, 4, 1654, 4);
-	SetPlayerAttachedObject(playerid, 7, 1654, 7);
-	SetPlayerAttachedObject(playerid, 8, 1654, 8);
+	SetPlayerAttachedObject(playerid, 3, 1252, 3);
+	SetPlayerAttachedObject(playerid, 4, 1252, 4);
+	SetPlayerAttachedObject(playerid, 7, 1252, 7);
+	SetPlayerAttachedObject(playerid, 8, 1252, 8);
 	Bomb[playerid] = 1;
 	return 1;
 }
@@ -1481,25 +1288,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         }
     }
     
-    if(dialogid == 10)//identifica o id do dialog.
-    {
-        if(response)//Caso ele clique no primeiro botão
-        {
-        	SendClientMessage(playerid, COLOR_GREEN, "Agora Você Produz Drogas");
-        	Profissoes[playerid][0] = PRODUTOR_DROGAS;
-        	SetPlayerSkin(playerid,1);
-        	new file[128], pName[MAX_PLAYER_NAME]; // Cria duas variaveis para armazenamento.
-		   	GetPlayerName(playerid, pName, MAX_PLAYER_NAME); // Armazenamos o nome do jogador na pName
-		   	format(file, sizeof(file), "contas/%s.ini", pName); // Formatamos a var file com o nome do jogador
-		    if(!dini_Exists(file)){
-		 		dini_Create(file);
-			}
-		   	dini_IntSet(file, "Skin", GetPlayerSkin(playerid)); // Setamos a id da skin do player na tag "Skin"
-		   	dini_IntSet(file, "Profissoes",PRODUTOR_DROGAS);
-
-        }
-    }
-    
     if(dialogid == 1)//identifica o id do dialog.
     {
         if(response)//Caso ele clique no primeiro botão
@@ -1550,14 +1338,6 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
    			{
    			    SetPlayerPos(playerid,1544.4136,-1353.3580,329.4742);
 				GivePlayerWeapon(playerid,Parachute,1);
-		    }
-			else if(listitem == 6)// Empresa 0
-   			{
-   			    SetPlayerPos(playerid,1043.7058,1011.9776,11.0000);
-		    }
-			else if(listitem == 7)// Produtor de Drogas
-   			{
-   			    SetPlayerPos(playerid,2351.4797,-658.7537,128.0620);
 		    }
    		}
     }
@@ -1666,17 +1446,6 @@ public CadeiaFunc(playerid){
 		SetPlayerHealth(playerid,0);
 		KillTimer(TimerCadeia[playerid]);
 	}
-}
-
-forward Perfil(playerid,id);
-public Perfil(playerid,id){
-    new str[300],name[300];
-    GetPlayerName(id, name, MAX_PLAYER_NAME);
- 	format(str,sizeof(str),"Perfil de %s:",name);
- 	SendClientMessage(playerid, COLOR_AQUAMARINE,str);
-	format(str,sizeof(str),"Nível: %i || Experiencia: %i/10 || Dinheiro: $%i || Maconha: %ig || Sementes de Maconha: %i",Nivel[id],Exp[id],GetPlayerMoney(id),Maconha[id],MaconhaPlant[id][0]);
-    SendClientMessage(playerid, COLOR_AQUAMARINE, str);
-    return 1;
 }
 
 forward VehicleFunc(playerid);
@@ -2030,17 +1799,16 @@ public OnPlayerRequestClass(playerid, classid)
 
 	if(gPlayerHasCitySelected[playerid]) {
 		//ClassSel_SetupCharSelection(playerid);
-  return 1;
+		return 1;
 	} else {
 		if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING) {
 			TogglePlayerSpectating(playerid,1);
     		TextDrawShowForPlayer(playerid, txtClassSelHelper);
     		gPlayerCitySelection[playerid] = -1;
-      		SetSpawnInfo(playerid, 0, 0, 240.1, 110.0, 200.0, 0.0, 0, 0, 0, 0, 0, 0);
 		}
   	}
     
-	return 1;
+	return 0;
 }
 
 //----------------------------------------------------------
@@ -2063,40 +1831,15 @@ public OnGameModeInit()
 	//ManualVehicleEngineAndLights();
 	//LimitGlobalChatRadius(300.0);
 	
-	new file[128],str[512];
-	
-	format(file, sizeof(file), "casas/casas.ini"); // Formatamos o caminho para o dini dentro da var file
-	for(new i = 0;i < MAX_HOUSE;i++){
-	    format(str,sizeof(str),"Casa_%i",i);
-   		Casa[i] = dini_Get(file, str);
-	}
-   	
-   	
-   	format(file, sizeof(file), "empresas/empresas.ini"); // Formatamos o caminho para o dini dentro da var file
-	for(new i = 0;i < MAX_COMPANY;i++){
-	    format(str,sizeof(str),"Empresa_%i_Dono",i);
-        Empresa[i][0] = dini_Get(file, str);
-        format(str,sizeof(str),"Empresa_%i_Fundos",i);
-		Empresa[i][1][0] = dini_Int(file, str);
-	}
-	
-	//empresaposicao
-	EmpresaPos[0] = {1043.7058,1011.9776,11.0000};
-	
-	//casaposicao
-	CasaPos[0] = {2062.8569,-1820.7913,13.5469};
+	new file[128];
+   	format(file, sizeof(file), "casas/casas.ini"); // Formatamos o caminho para o dini dentro da var file
+	new str[512];
+   	Casa[0] = dini_Get(file, "Casa_0");
 	
  	zone = GangZoneCreate(1976.4213,-1351.4966, 1862.1624,-1451.2772);
  	
  	AddStaticPickup(3096, 1, 2455.2834,-1461.1854,24.0000, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Blindagem\n/blindar Para Blindar", COLOR_ORANGE, 2455.2834,-1461.1854,24.0000, 15.0, 0);
-	
-	AddStaticPickup(2060, 1, 2355.5264,-648.6511,128.0547, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Semente De Maconha\n/pegarsementes Para Pegar Sementes", COLOR_ORANGE, 2355.5264,-648.6511,128.0547, 15.0, 0);
-	
-	AddStaticPickup(1239, 1, 2351.4797,-658.7537,128.0620, 0);
-	Create3DTextLabel("{43BBDE}\n{FF7F00}Produtor de Drogas\n/empregar Para Ser Um Produtor de Drogas", COLOR_ORANGE,2351.4797,-658.7537,128.0620, 15.0, 0);
-	
 
 	AddStaticPickup(1582, 1, 2116.9954,-1788.4574,13.5547, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Pizzas\n/trabalhar para pegar as pizzas", COLOR_ORANGE, 2116.9954,-1788.4574,13.5547, 15.0, 0);
@@ -2116,11 +1859,6 @@ public OnGameModeInit()
 	
 	AddStaticPickup(1239, 1,2442.9648,-1550.4795,23.9976, 0);
 	Create3DTextLabel("{43BBDE}\n{FF7F00}Saida\n/entrar Para Sair da Casa", COLOR_ORANGE, 2496.049804,-1695.238159,1014.742187, 15.0, 0);
-	
-	format(str,sizeof(str),"{43BBDE}\n{FF7F00}Empresa: 0\nDono: %s\nFundos: $%i",Empresa[0][0],Empresa[0][1]);
- 	AddStaticPickup(1273, 1,1043.7058,1011.9776,11.0000, 0);
-	EmpresaTxt[0] = Create3DTextLabel(str, COLOR_ORANGE, 1043.7058,1011.9776,11.0000, 15.0, 0);
-    
 	
 	
 	
@@ -2307,21 +2045,26 @@ public OnGameModeInit()
 
 public OnGameModeExit()
 {
-	new file[128],str[512];
-	
-	format(file, sizeof(file), "casas/casas.ini"); // Formatamos o caminho para o dini dentro da var file
-	for(new i = 0;i < MAX_HOUSE;i++){
-	    format(str,sizeof(str),"Casa_%i",i);
-	    dini_Set(file, str, Casa[i]);
-	}
-
-
-   	format(file, sizeof(file), "empresas/empresas.ini"); // Formatamos o caminho para o dini dentro da var file
-	for(new i = 0;i < MAX_COMPANY;i++){
-	    format(str,sizeof(str),"Empresa_%i_Dono",i);
-        dini_Set(file, str, Empresa[i][0]);
-        format(str,sizeof(str),"Empresa_%i_Fundos",i);
-        dini_IntSet(file, str, Empresa[i][1][0]);
+ 	for(new i = 0;i < MAX_PLAYERS;i++){
+ 	
+ 	    new string[512];
+		for(new j = 0;j < MAX_ACESSORIOS;j++){
+		    if(acessoriosP[i][j] == 1){
+				format(string, sizeof(string), "%sa%i",string,j);
+			}
+		}
+		
+        new file[128], pName[MAX_PLAYER_NAME]; // Cria duas variaveis para armazenamento.
+	   	GetPlayerName(i, pName, MAX_PLAYER_NAME); // Armazenamos o nome do jogador na pName
+	   	format(file, sizeof(file), "contas/%s.ini", pName); // Formatamos a var file com o nome do jogador
+	   	dini_Set(file, "Nome", pName); // Setamos no arquivo formatado o a tag "Nome" com o nome do jogador
+	   	dini_IntSet(file, "Skin", GetPlayerSkin(i)); // Setamos a id da skin do player na tag "Skin"
+	   	dini_Set(file, "Itens", string);
+	   	dini_IntSet(file, "Nivel", Nivel[i]);
+	 	dini_IntSet(file, "Exp", Exp[i]);
+	 	dini_IntSet(file, "Money", Money[i]);
+	   	dini_IntSet(file, "Tempo_Cadeia", cadeia[i][0][0]);
+	   	dini_Set(file, "Motivo_Cadeia", cadeia[i][1]);
 	}
     print("Gamemode ended.");
     return 1;
@@ -2378,44 +2121,16 @@ public TimerClock(){
 	new year, month, day, hours, minutes, seconds;
 	getdate(year, month, day), gettime(hours, minutes, seconds);
  	if(minutes == 0 && seconds == 0){
-		Payday();
-  	}
-}
-
-forward Procurar(playerid,id);
-public Procurar(playerid,id){
-	new Float:x,Float:y,Float:z;
-    GetPlayerPos(id, x, y, z);
-    SetPlayerObjectPos(playerid, ProcurarArrow[playerid][0], x,y,z+1);
-    SetPlayerMapIcon(playerid, 51,x,y,z, 0, COLOR_RED,1);
-}
-
-forward Payday();
-public Payday(){
-	new str[512],Float:x,Float:y,Float:z;
-    SendClientMessageToAll(COLOR_GREEN ,"Payday: +1 de Exp");
-
-	for(new i = 0;i < MAX_PLAYERS;i++){
-		if(IsPlayerConnected(i)){
+		SendClientMessageToAll(COLOR_GREEN ,"Payday: +1 de Exp");
+		for(new i = 0;i < MAX_PLAYERS;i++){
 			Exp[i]++;
 			if(Exp[i] >= 10){
-	  			Exp[i] = 0;
-	  			Nivel[i]++;
-	     		SendClientMessage(i,COLOR_GREEN ,"Parabens Você Passou de Nível");
+                Exp[i] = 0;
+                Nivel[i]++;
+                SendClientMessage(i,COLOR_GREEN ,"Parabens Você Passou de Nível");
 			}
-			GetObjectPos(MaconhaPlant[i][1],x,y,z);
-			DestroyObject(MaconhaPlant[i][1]);
-			MaconhaPlant[i][1] = CreateObject(15038, x, y, z+0.45, 0.0, 0.0, 96.0);
-			MaconhaPlant[i][2] = MaconhaPlant[i][2] + 100;
 		}
 	}
-	for(new i = 0; i < MAX_COMPANY;i++){
-		Empresa[i][1][0] = Empresa[i][1][0] + 50000;
-	}
-
-	format(str,sizeof(str),"{43BBDE}\n{FF7F00}Empresa: 0\nDono: %s\nFundos: $%i",Empresa[0][0],Empresa[0][1]);
-	Update3DTextLabelText(EmpresaTxt[0], COLOR_ORANGE, str);
-	return 1;
 }
 
 //----------------------------------------------------------
