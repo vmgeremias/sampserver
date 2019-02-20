@@ -3,3 +3,5 @@ pawno/settings.ini
 server_log.txt
 pawno/settings.ini
 logs/log-core.log
+logs/log-core.log
+server_log.txt

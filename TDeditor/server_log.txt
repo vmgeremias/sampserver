@@ -496,3 +496,264 @@ TDEditor Plugin loaded, thank you for using.
 [00:26:08] [connection] incoming connection: 127.0.0.1:49420 id: 0
 [00:26:09] [join] Mario_Tizz has joined the server (0:127.0.0.1)
 [00:27:18] [part] Mario_Tizz has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:33:28] 
+[21:33:28] Server Plugins
+[21:33:28] --------------
+[21:33:28]  Loading plugin: sscanf
+[21:33:28] 
+
+[21:33:28]  ===============================
+
+[21:33:28]       sscanf plugin loaded.     
+
+[21:33:28]    (c) 2009 Alex "Y_Less" Cole
+
+[21:33:28]    0.3d-R2 500 Players "dnee"
+
+[21:33:28]  ===============================
+
+[21:33:28]   Loaded.
+[21:33:28]  Loading plugin: TDE
+[21:33:28] 
+TDEditor Plugin loaded, thank you for using.
+
+[21:33:28]   Loaded.
+[21:33:28]  Loaded 2 plugins.
+
+[21:33:28] 
+[21:33:28] Filterscripts
+[21:33:28] ---------------
+[21:33:28]   Loading filterscript 'TDE.amx'...
+[21:33:28]  
+[21:33:28]  
+[21:33:28]  
+[21:33:28]  
+[21:33:28] ___ __  __
+[21:33:28]  | |  \|_  _|.|_ _  _		
+[21:33:28]  | |__/|__(_|||_(_)|			
+[21:33:28]  
+[21:33:28] TDEditor V1.17 by adri1
+[21:33:28] TDEditor loaded
+[21:33:28]  
+[21:33:28]   Loaded 1 filterscripts.
+
+[21:33:28] AllowAdminTeleport() : function is deprecated. Please see OnPlayerClickMap()
+[21:33:28] 
+----------------------------------
+[21:33:28]   Bare Script
+
+[21:33:28] ----------------------------------
+
+[21:33:28] Number of vehicle models: 0
+[21:33:44] [connection] 127.0.0.1:60515 requests connection cookie.
+[21:33:45] [connection] incoming connection: 127.0.0.1:60515 id: 0
+[21:33:45] [join] Mario_TraaP has joined the server (0:127.0.0.1)
+[21:34:08] [part] Mario_TraaP has left the server (0:1)
+Console input: exit
+[21:37:20] --- Server Shutting Down.
+[21:37:20]  
+[21:37:20]  
+[21:37:20]  
+[21:37:20]  
+[21:37:20] ___ __  __
+[21:37:20]  | |  \|_  _|.|_ _  _		
+[21:37:20]  | |__/|__(_|||_(_)|			
+[21:37:20]  
+[21:37:20] TDEditor V1.17 by adri1
+[21:37:20] TDEditor unloaded
+[21:37:20]  
+[21:37:20] 
+
+[21:37:20]  ===============================
+
+[21:37:20]      sscanf plugin unloaded.    
+
+[21:37:20]  ===============================
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[21:37:29] 
+[21:37:29] Server Plugins
+[21:37:29] --------------
+[21:37:29]  Loading plugin: sscanf
+[21:37:29] 
+
+[21:37:29]  ===============================
+
+[21:37:29]       sscanf plugin loaded.     
+
+[21:37:29]    (c) 2009 Alex "Y_Less" Cole
+
+[21:37:29]    0.3d-R2 500 Players "dnee"
+
+[21:37:29]  ===============================
+
+[21:37:29]   Loaded.
+[21:37:29]  Loading plugin: TDE
+[21:37:29] 
+TDEditor Plugin loaded, thank you for using.
+
+[21:37:29]   Loaded.
+[21:37:29]  Loaded 2 plugins.
+
+[21:37:29] 
+[21:37:29] Filterscripts
+[21:37:29] ---------------
+[21:37:29]   Loading filterscript 'TDE.amx'...
+[21:37:29]  
+[21:37:29]  
+[21:37:29]  
+[21:37:29]  
+[21:37:29] ___ __  __
+[21:37:29]  | |  \|_  _|.|_ _  _		
+[21:37:29]  | |__/|__(_|||_(_)|			
+[21:37:29]  
+[21:37:29] TDEditor V1.17 by adri1
+[21:37:29] TDEditor loaded
+[21:37:29]  
+[21:37:29]   Loaded 1 filterscripts.
+
+[21:37:29] AllowAdminTeleport() : function is deprecated. Please see OnPlayerClickMap()
+[21:37:29] 
+----------------------------------
+[21:37:29]   Bare Script
+
+[21:37:29] ----------------------------------
+
+[21:37:29] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:58:00] 
+[01:58:00] Server Plugins
+[01:58:00] --------------
+[01:58:00]  Loading plugin: sscanf
+[01:58:00] 
+
+[01:58:00]  ===============================
+
+[01:58:00]       sscanf plugin loaded.     
+
+[01:58:00]    (c) 2009 Alex "Y_Less" Cole
+
+[01:58:00]    0.3d-R2 500 Players "dnee"
+
+[01:58:00]  ===============================
+
+[01:58:00]   Loaded.
+[01:58:00]  Loading plugin: TDE
+[01:58:00] 
+TDEditor Plugin loaded, thank you for using.
+
+[01:58:00]   Loaded.
+[01:58:00]  Loaded 2 plugins.
+
+[01:58:00] 
+[01:58:00] Filterscripts
+[01:58:00] ---------------
+[01:58:00]   Loading filterscript 'TDE.amx'...
+[01:58:00]  
+[01:58:00]  
+[01:58:00]  
+[01:58:00]  
+[01:58:00] ___ __  __
+[01:58:00]  | |  \|_  _|.|_ _  _		
+[01:58:00]  | |__/|__(_|||_(_)|			
+[01:58:00]  
+[01:58:00] TDEditor V1.17 by adri1
+[01:58:00] TDEditor loaded
+[01:58:00]  
+[01:58:00]   Loaded 1 filterscripts.
+
+[01:58:00] AllowAdminTeleport() : function is deprecated. Please see OnPlayerClickMap()
+[01:58:00] 
+----------------------------------
+[01:58:00]   Bare Script
+
+[01:58:00] ----------------------------------
+
+[01:58:00] Number of vehicle models: 0
+[01:58:21] [connection] 127.0.0.1:59924 requests connection cookie.
+[01:58:22] [connection] incoming connection: 127.0.0.1:59924 id: 0
+[01:58:22] [join] Mario_TraaP has joined the server (0:127.0.0.1)
+[01:59:38] [part] Mario_TraaP has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:06:04] 
+[02:06:04] Server Plugins
+[02:06:04] --------------
+[02:06:04]  Loading plugin: sscanf
+[02:06:04] 
+
+[02:06:04]  ===============================
+
+[02:06:04]       sscanf plugin loaded.     
+
+[02:06:04]    (c) 2009 Alex "Y_Less" Cole
+
+[02:06:04]    0.3d-R2 500 Players "dnee"
+
+[02:06:04]  ===============================
+
+[02:06:04]   Loaded.
+[02:06:04]  Loading plugin: TDE
+[02:06:04] 
+TDEditor Plugin loaded, thank you for using.
+
+[02:06:04]   Loaded.
+[02:06:04]  Loaded 2 plugins.
+
+[02:06:04] 
+[02:06:04] Filterscripts
+[02:06:04] ---------------
+[02:06:04]   Loading filterscript 'TDE.amx'...
+[02:06:04]  
+[02:06:04]  
+[02:06:04]  
+[02:06:04]  
+[02:06:04] ___ __  __
+[02:06:04]  | |  \|_  _|.|_ _  _		
+[02:06:04]  | |__/|__(_|||_(_)|			
+[02:06:04]  
+[02:06:04] TDEditor V1.17 by adri1
+[02:06:04] TDEditor loaded
+[02:06:04]  
+[02:06:04]   Loaded 1 filterscripts.
+
+[02:06:04] AllowAdminTeleport() : function is deprecated. Please see OnPlayerClickMap()
+[02:06:04] 
+----------------------------------
+[02:06:04]   Bare Script
+
+[02:06:04] ----------------------------------
+
+[02:06:04] Number of vehicle models: 0

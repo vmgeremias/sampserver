@@ -1,7 +1,7 @@
 //Global TextDraws: 
 
 
-new Text:TDEditor_TD[10];
+new Text:TDEditor_TD[11];
 
 TDEditor_TD[0] = TextDrawCreate(511.249877, 311.333099, "INFO_VEICULO");
 TextDrawLetterSize(TDEditor_TD[0], 0.400000, 1.600000);
@@ -116,8 +116,19 @@ TextDrawFont(TDEditor_TD[9], 1);
 TextDrawSetProportional(TDEditor_TD[9], 1);
 TextDrawSetShadow(TDEditor_TD[9], 0);
 
+TDEditor_TD[10] = TextDrawCreate(463.333343, 324.399993, "Gasolina");
+TextDrawLetterSize(TDEditor_TD[10], 0.400000, 1.600000);
+TextDrawAlignment(TDEditor_TD[10], 1);
+TextDrawColor(TDEditor_TD[10], -1);
+TextDrawSetShadow(TDEditor_TD[10], 0);
+TextDrawSetOutline(TDEditor_TD[10], 0);
+TextDrawBackgroundColor(TDEditor_TD[10], 255);
+TextDrawFont(TDEditor_TD[10], 1);
+TextDrawSetProportional(TDEditor_TD[10], 1);
+TextDrawSetShadow(TDEditor_TD[10], 0);
 
 
 
-//Total textdraws exported: 10 (10 global textdraws / 0 player textdraws) ~ 3/1/2019 ~ 0:40:38
+
+//Total textdraws exported: 11 (11 global textdraws / 0 player textdraws) ~ 3/2/2019 ~ 1:59:36
 TDEditor V1.17 BY ADRI1
